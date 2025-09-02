@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'CC Matinee Idol';
+  src: url('/fonts/ccmatineeidol_regular_1-webfont.woff2') format('woff2'),
+    url('/fonts/ccmatineeidol_regular_1-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-DemiItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-DemiItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-ExtraBd.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-ExtraBd.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-ExtraBdItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-ExtraBdItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-ExtraLight.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-XlightItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-XlightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Heavy.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-HeavyItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-HeavyItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Light.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-LightItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Medium.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-MediumItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF Normal';
+  src: url('/fonts/SVN-ArticulatCF-Normal.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF Normal';
+  src: url('/fonts/SVN-ArticulatCF-NormalItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-NormalItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Regular.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Thin.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Italic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Bold.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-ThinItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-BoldItalic.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Articulat CF';
+  src: url('/fonts/SVN-ArticulatCF-Demi.woff2') format('woff2'),
+    url('/fonts/SVN-ArticulatCF-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
