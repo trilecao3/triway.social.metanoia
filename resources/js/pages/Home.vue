@@ -113,7 +113,11 @@ async function preloadVideo(src) {
 
       // finalize
       progress.value = 100;
-      isLoaded.value = true;
+
+      setTimeout(() => {
+        isLoaded.value = true;
+      }, 750);
+      
       return { videoElement: video, blobUrl: videoBlobUrl };
     }
 

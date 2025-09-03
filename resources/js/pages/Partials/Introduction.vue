@@ -14,106 +14,133 @@ onMounted(() => {
 
   // ---------- CONFIG (change these) ----------
   const VIDEO_SRC = "/images/sequence.mp4"; // <-- change to your video file path
-  const SHIFT_X_PX = -30; // <-- optional horizontal shift like your old code
-  const SCRUB_SMOOTHNESS = 0.6; // lower = tighter, higher = smoother
+  const SHIFT_X_PX = -30; // optional horizontal shift
+  const SCRUB_SMOOTHNESS = 0.6;
   // -------------------------------------------
 
-  // DPR-aware canvas sizing variables
+  // DPR and offscreen buffer
   let dpr = window.devicePixelRatio || 1;
+  const offscreen = document.createElement("canvas");
+  const offCtx = offscreen.getContext("2d");
 
-  // Create & append hidden video element
+  // create hidden video
   const video = document.createElement("video");
   video.src = VIDEO_SRC;
   video.preload = "auto";
   video.muted = true;
   video.playsInline = true;
-  video.controls = false;
   video.style.display = "none";
   document.body.appendChild(video);
 
-  // small object we animate with GSAP
+  // scrub object
   const scrub = { progress: 0 };
 
-  // render loop RAF id
-  let rafId = null;
-
-  // utility: resize canvas to window and set DPR correctly
+  // Resize both canvases for DPR
   function resizeCanvas() {
     dpr = window.devicePixelRatio || 1;
-    // set internal pixel buffer size
+
+    // visible canvas
     canvas.width = Math.round(window.innerWidth * dpr);
     canvas.height = Math.round(window.innerHeight * dpr);
-    // keep CSS size as device independent pixels
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
-    // map drawing operations to CSS pixels
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    // offscreen canvas sized in CSS pixels (we'll draw using same CSS units)
+    offscreen.width = Math.round(window.innerWidth);
+    offscreen.height = Math.round(window.innerHeight);
   }
 
-  // draw video with "cover" behaviour (preserve aspect, crop)
-  function drawVideoCover() {
-    // logical canvas size (CSS px)
-    const cw = canvas.width / dpr;
-    const ch = canvas.height / dpr;
+  // "cover" draw logic but for arbitrary ctx & target sizes (css px)
+  function computeCoverParams(videoWidth, videoHeight, targetW, targetH) {
+    const canvasRatio = targetW / targetH;
+    const videoRatio = videoWidth / videoHeight;
+    let renderW, renderH, xOffset, yOffset;
 
+    if (videoRatio > canvasRatio) {
+      // video wider -> fit height, crop sides
+      renderH = targetH;
+      renderW = (videoWidth * targetH) / videoHeight;
+      xOffset = (targetW - renderW) / 2;
+      yOffset = 0;
+    } else {
+      // video taller -> fit width, crop top/bottom
+      renderW = targetW;
+      renderH = (videoHeight * targetW) / videoWidth;
+      xOffset = 0;
+      yOffset = (targetH - renderH) / 2;
+    }
+
+    return { renderW, renderH, xOffset, yOffset };
+  }
+
+  // Draw video onto offscreen canvas (CSS pixels)
+  function drawVideoToOffscreen() {
     const vw = video.videoWidth;
     const vh = video.videoHeight;
     if (!vw || !vh) return;
 
-    const canvasRatio = cw / ch;
-    const videoRatio = vw / vh;
+    const cw = offscreen.width;
+    const ch = offscreen.height;
 
-    let renderW, renderH, xOffset, yOffset;
+    const { renderW, renderH, xOffset, yOffset } = computeCoverParams(vw, vh, cw, ch);
 
-    if (videoRatio > canvasRatio) {
-      // video wider than canvas → fit height, crop sides
-      renderH = ch;
-      renderW = (vw * ch) / vh;
-      xOffset = (cw - renderW) / 2;
-      yOffset = 0;
-    } else {
-      // video taller than canvas → fit width, crop top/bottom
-      renderW = cw;
-      renderH = (vh * cw) / vw;
-      xOffset = 0;
-      yOffset = (ch - renderH) / 2;
-    }
-
-    // apply optional horizontal pixel shift
-    xOffset += SHIFT_X_PX;
-
-    // clear & draw
-    ctx.clearRect(0, 0, cw, ch);
-    // drawImage expects CSS px coordinates when using setTransform(dpr,...)
-    ctx.drawImage(video, xOffset, yOffset, renderW, renderH);
+    // clear offscreen then draw the video frame into offscreen
+    offCtx.clearRect(0, 0, cw, ch);
+    // apply SHIFT_X_PX in CSS pixels
+    offCtx.drawImage(video, xOffset + (SHIFT_X_PX / dpr), yOffset, renderW, renderH);
   }
 
-  // continuous render loop — redraw as video.time changes
-  function startRenderLoop() {
-    function loop() {
-      // If requestVideoFrameCallback is available you could use it for more reliability,
-      // but we keep RAF for broad compatibility:
-      drawVideoCover();
-      rafId = requestAnimationFrame(loop);
-    }
-    if (!rafId) loop();
+  // Copy offscreen (CSS pixels) to visible canvas (we're using ctx.setTransform for DPR)
+  function copyOffscreenToVisible() {
+    // Do not clear visible canvas to avoid flicker — just paint over
+    ctx.drawImage(offscreen, 0, 0, offscreen.width, offscreen.height, 0, 0, offscreen.width, offscreen.height);
   }
 
-  function stopRenderLoop() {
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = null;
+  // Draw-ready handler: run this ONLY when a decoded frame is available
+  function onFrameReady() {
+    // 1) paint to offscreen using CSS pixel dims
+    drawVideoToOffscreen();
+    // 2) copy to main canvas (visible)
+    copyOffscreenToVisible();
   }
 
-  // Called when video metadata is available (dimensions + duration)
+  // rVFC path (preferred)
+  let rVFC_handle = null;
+  function startRVFC() {
+    if (!video.requestVideoFrameCallback) return false;
+    // continuous chain of rVFC callbacks
+    const cb = (now, metadata) => {
+      onFrameReady();
+      rVFC_handle = video.requestVideoFrameCallback(cb);
+    };
+    rVFC_handle = video.requestVideoFrameCallback(cb);
+    return true;
+  }
+
+  function stopRVFC() {
+    // no direct cancel API, but we can ignore handle; browser handles lifecycle
+    rVFC_handle = null;
+  }
+
+  // Fallback path (for browsers without rVFC like older FF or when rVFC not available)
+  // We'll listen to 'seeked' and 'timeupdate' events and draw only in their callbacks.
+  let pendingSeek = false;
+  function onSeekedOrTimeUpdate() {
+    // draw after seek completes (browser decoded frame ready)
+    onFrameReady();
+    pendingSeek = false;
+  }
+
+  // Called when video metadata is ready
   function onVideoReady() {
-    // ensure canvas sized correctly
+    // size canvases
     resizeCanvas();
 
-    // Try to prime decoding on some platforms (helps iOS / Safari)
-    // (muted + playsInline allows autoplay)
-    video.play().then(() => video.pause()).catch(() => { /* ignore */ });
+    // prime decoding: play/pause to encourage decoder allocation (helps Safari/Chrome)
+    video.play().then(() => video.pause()).catch(() => {});
 
-    // GSAP drives scrub.progress from 0 -> 1
+    // GSAP scrub drives scrub.progress -> map to video.currentTime
     gsap.to(scrub, {
       progress: 1,
       ease: "none",
@@ -124,42 +151,52 @@ onMounted(() => {
         end: "bottom bottom",
       },
       onUpdate: () => {
-        // map progress to video time (clamp)
         const dur = video.duration || 0.0001;
         const t = Math.min(Math.max(scrub.progress, 0), 1) * dur;
-        // assign currentTime (seeking). keep small threshold to reduce unnecessary seeks:
-        if (Math.abs(video.currentTime - t) > 0.01) {
+        // seek only if difference is significant (avoid tiny seeks)
+        if (Math.abs(video.currentTime - t) > 0.02) {
+          pendingSeek = true;
+          // If rVFC available, setting currentTime will trigger next rVFC when decoded
           video.currentTime = t;
         }
       },
     });
 
-    // start RAF render loop that draws the current video frame onto canvas
-    startRenderLoop();
+    // Prefer rVFC (most robust) — if available start it
+    if (startRVFC()) {
+      // rVFC will call onFrameReady continuously as frames are decoded
+    } else {
+      // fallback: use seeked/timeupdate event
+      video.addEventListener("seeked", onSeekedOrTimeUpdate);
+      video.addEventListener("timeupdate", onSeekedOrTimeUpdate);
+      // also try an initial draw (if video has a frame ready)
+      onFrameReady();
+    }
   }
 
-  // event listeners
+  // Attach event and fallback handling
   video.addEventListener("loadedmetadata", onVideoReady);
-  window.addEventListener("resize", resizeCanvas);
 
-  // If video has already loaded metadata before listener attached:
+  // If metadata already ready (rare), call immediately
   if (video.readyState >= 1 && video.videoWidth && video.videoHeight) {
     onVideoReady();
   }
 
-  // ---------- cleanup ----------
+  window.addEventListener("resize", resizeCanvas);
+
+  // CLEANUP
   onBeforeUnmount(() => {
-    stopRenderLoop();
     window.removeEventListener("resize", resizeCanvas);
     video.removeEventListener("loadedmetadata", onVideoReady);
-    // remove appended video element
+    video.removeEventListener("seeked", onSeekedOrTimeUpdate);
+    video.removeEventListener("timeupdate", onSeekedOrTimeUpdate);
+    stopRVFC();
     if (video.parentNode) video.parentNode.removeChild(video);
-    // kill ScrollTrigger instances
     ScrollTrigger.getAll().forEach((st) => st.kill());
-    // kill GSAP tweens on scrub object
     gsap.killTweensOf(scrub);
   });
 });
+
 </script>
 <template>
    <div class="animation-section relative h-[260vh] w-full">
