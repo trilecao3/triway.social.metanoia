@@ -40,7 +40,7 @@ onMounted(() => {
 // Preload Site
 const isLoaded = ref(false);
 const progress = ref(0);
-const VIDEO_SRC = "/videos/sequence.mp4";
+const VIDEO_SRC = "/images/sequence.mp4";
 let videoBlobUrl = null;
 let fetchAbort = null;
 

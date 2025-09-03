@@ -13,7 +13,7 @@ onMounted(() => {
   const ctx = canvas.getContext("2d");
 
   // ---------- CONFIG (change these) ----------
-  const VIDEO_SRC = "/videos/sequence.mp4"; // <-- change to your video file path
+  const VIDEO_SRC = "/images/sequence.mp4"; // <-- change to your video file path
   const SHIFT_X_PX = -30; // <-- optional horizontal shift like your old code
   const SCRUB_SMOOTHNESS = 0.6; // lower = tighter, higher = smoother
   // -------------------------------------------
