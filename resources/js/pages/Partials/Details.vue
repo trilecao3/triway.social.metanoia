@@ -168,22 +168,31 @@ import { Badge } from '@/components/ui/badge';
 
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
         <h2 class="text-4xl font-bold tracking-tighter">Các cách mua vé</h2>
-        <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform">
-            <p class="text-lg xl:text-xl font-semibold">Mua qua <span class="text-green-700">Google Form</span></p>
-            <p class="mt-1 leading-snug">Dành cho chuyển khoản.</p>
+        <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          <a href="#" class="block p-4 sm:p-5 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+            <div>
+              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-green-700">Google Form</span></p>
+              <p class="leading-snug">Cho chuyển khoản.</p>
+            </div>
+            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
           </a>
-          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform">
-            <p class="text-lg xl:text-xl font-semibold">Mua qua <span class="text-orange-600">Vibeji</span></p>
-            <p class="mt-1 leading-snug">Hỗ trợ thanh toán thẻ và ví.</p>
+          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+            <div>
+              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-orange-600">Vibeji</span></p>
+              <p class="leading-snug">Cho thanh toán thẻ.</p>
+            </div>
+            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
           </a>
-          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform">
-            <p class="text-lg xl:text-xl font-semibold">Mua qua <span class="text-pink-600">Instagram</span></p>
-            <p class="mt-1 leading-snug">@triway.social hỗ trợ mua vé.</p>
+          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+            <div>
+              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-pink-600">Instagram</span></p>
+              <p class="leading-snug">@triway.social hỗ trợ.</p>
+            </div>
+            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
           </a>
         </div>
 
-        <p class="mt-8 max-w-2xl italic text-sm sm:text-base">* Lưu ý: Chỉ dùng link Google Form được gửi từ các nguồn chính thức của The Tri Way. BTC sẽ không hỗ trợ refund sau khi bạn đã mua vé, bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
+        <p class="mt-8 max-w-2xl italic text-sm sm:text-base"><b>* Lưu ý:</b> Chỉ dùng link Google Form được gửi từ các nguồn chính thức của The Tri Way. BTC sẽ không hỗ trợ refund sau khi bạn đã mua vé, bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
       </div>
 
       <div class="absolute left-0 bottom-0 bg-[url('/images/Crowded.png')] bg-no-repeat sm:bg-repeat bg-top w-full h-[30vh] bg-cover 2xl:bg-contain"></div>
