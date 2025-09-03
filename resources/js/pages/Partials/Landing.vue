@@ -42,7 +42,7 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
         <span
           v-for="(word, i) in loopWords"
           :key="i"
-          class="mx-2 sm:mx-5 xl:mx-6 2xl:mx-6 text-[3.5rem] sm:text-[6rem] xl:text-[7rem] 2xl:text-[7.5rem] tracking-tighter font-bold cursor-default select-none"
+          class="mx-2 sm:mx-5 xl:mx-6 2xl:mx-6 text-[3rem] sm:text-[6rem] xl:text-[7rem] 2xl:text-[7.5rem] tracking-tighter font-bold cursor-default select-none"
           :style="{ opacity: opacities[i] }"
         >
           {{ word }}
@@ -55,9 +55,9 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
         <img src="/images/window-of-metanoia.png" alt="Metanoia Logo" class="w-full" />
       </div>
       <div class="w-full sm:w-1/2">
-        <div class="-mt-5">
-          <div class="flex items-center justify-center sm:justify-start  gap-x-5 sm:gap-x-7 opacity-75">
-            <h1 class="text-[6rem] sm:text-[7rem] xl:text-[9rem] font-extrabold tracking-tight">
+        <div class="-mt-8 sm:-mt-5">
+          <div class="flex items-center justify-center sm:justify-start  gap-x-4 sm:gap-x-7 opacity-75">
+            <h1 class="text-[4.8rem] sm:text-[7rem] xl:text-[9rem] font-extrabold tracking-tight">
               <span v-if="daysUntilTarget.length === 2">
                 {{ daysUntilTarget[0] }}
               </span>
@@ -65,16 +65,16 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
                 {{ daysUntilTarget.length === 2 ? daysUntilTarget[1] : daysUntilTarget[0] }}
               </span>
             </h1>
-            <span class="text-[2.3rem] sm:text-[3rem] xl:text-[3.8rem] font-bold leading-11 sm:leading-13 xl:leading-17 tracking-tight -mt-1.5">
+            <span class="text-[2rem] sm:text-[3rem] xl:text-[3.8rem] font-bold leading-9 sm:leading-13 xl:leading-17 tracking-tight -mt-1.5">
               ngày<br>
               <span class="bg-gradient-to-r from-gray-50 to-gray-300/50 bg-clip-text text-transparent">đến với</span>
             </span>
           </div>
-          <div class="mx-auto sm:mx-0 -mt-5 sm:mt-0 block w-fit">
-            <h1 class="text-3xl sm:text-4xl xl:text-5xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
-            <span class="block font-display text-4xl sm:text-5xl xl:text-6xl text-center rotate-[-4deg] mx-auto">authenticity</span>
+          <div class="mx-auto sm:mx-0 -mt-3 sm:mt-0 block w-fit">
+            <h1 class="text-2xl sm:text-4xl xl:text-5xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
+            <span class="block -mt-1 sm:mt-0 font-display text-3xl sm:text-5xl xl:text-6xl text-center rotate-[-4deg] mx-auto">authenticity</span>
           </div>
-          <div class="mt-10 sm:mt-24 text-center sm:text-left">
+          <div class="mt-7 sm:mt-24 text-center sm:text-left">
             <p>Thiết kế & tổ chức bởi</p>
             <p class="uppercase">
               <b>The Tri Way</b> x <b>Triway Social Team</b>
