@@ -116,7 +116,7 @@ onMounted(() => {
 
     <!-- Overlays (each takes 100vh inside the 500vh scroll area) -->
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
-      <div class="px-5 sm:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
+      <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
           <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/60 -ml-2 sm:-ml-5 -rotate-[6deg]">Message</span>
           Lời đầu từ The Tri Way
@@ -130,7 +130,7 @@ onMounted(() => {
     </div>
 
     <div class="absolute top-[80vh] w-full h-screen flex items-center justify-center z-10">
-      <div class="px-5 sm:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
+      <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Authenticity</span>
           Sự Chân Thực Cá Nhân
@@ -144,7 +144,7 @@ onMounted(() => {
     </div>
 
     <div class="absolute top-[140vh] w-full h-screen flex items-center justify-center z-10">
-      <div class="px-5 sm:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
+      <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Are you ready?</span>
           Bạn đã sẵn sàng chưa?
@@ -157,7 +157,7 @@ onMounted(() => {
     </div>
 
     <div class="absolute top-[220vh] w-full h-[30vh] flex items-center justify-center z-10">
-      <div class="px-5 sm:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
+      <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <a href="#details" class="inline-block px-8 py-4 rounded-full text-lg font-bold transition-all ring-2 ring-white/60 hover:ring-white">
           Chi tiết và vé sự kiện
         </a>

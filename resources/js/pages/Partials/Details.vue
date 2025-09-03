@@ -2,7 +2,7 @@
 import { Badge } from '@/components/ui/badge';
 </script>
 <template>
-  <section class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5">
+  <section class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
     <div class="w-full md:max-w-3xl 2xl:max-w-4xl pt-14 sm:pt-28 space-y-14 sm:space-y-20">
       <div class="w-full flex items-center justify-between">
         <div class="text-6xl font-bold leading-12 tracking-tight">
@@ -85,12 +85,12 @@ import { Badge } from '@/components/ui/badge';
     </div>
   </section>
   <section class="pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
-    <div class="-mb-32 relative z-10 max-w-[300px] sm:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
+    <div class="-mb-32 relative z-10 max-w-[300px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
       <div class="w-full flex flex-col gap-y-5 sm:flex-row items-center justify-between">
         <div class="text-6xl font-bold leading-14 tracking-tight">
           <img src="/images/Location_Tittle.png" alt="Agenda Icon" class="h-20 sm:h-28" />
         </div>
-        <div class="text-3xl sm:text-5xl font-semibold sm:leading-12 tracking-tight text-center sm:text-right">
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-semibold sm:leading-12 tracking-tight text-center sm:text-right">
           <p>SOHO Ballroom</p>
           <p>The Global City.</p>
         </div>
