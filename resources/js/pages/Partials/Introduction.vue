@@ -122,8 +122,8 @@ onMounted(() => {
           Lời đầu từ The Tri Way
         </h2>
         <div class="max-w-[290px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p>Chào mừng bạn đến với mùa III của sự kiện lớn thuờng niên của Trí, với tên gọi <b>Metanoia</b> /<span>μετάνοῦς</span>/ <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
-          <p>Metanoia phát triển lớn dần qua mỗi năm, và là cột mốc tinh thần cho nhiều người: đó là những sự phát triển bản thân sau 1 năm nhìn lại, hoặc một chuỗi những người bạn đồng điệu được kết nối ngay tại event.</p>
+          <p>Chào mừng bạn đến với mùa 3 của sự kiện lớn thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> /<span>μετάνοῦς</span>/ <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
+          <p>Metanoia phát triển lớn dần qua mỗi năm, và là cột mốc tinh thần cho nhiều người tham dự: đó là những sự phát triển bản thân sau 1 năm nhìn lại, hoặc một chuỗi những người bạn đồng điệu được kết nối ngay tại event.</p>
           <p>Chương III chứng kiến sự đầu tư lớn nhất trước giờ của Trí, và đón chào sự tham gia của Triway Social Team. Tất cả cùng hướng đến việc tạo ra trải nghiệm tốt nhất cho người tham dự.</p>
         </div>
       </div>
@@ -137,7 +137,7 @@ onMounted(() => {
         </h2>
         <div class="max-w-[280px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
           <p class="text-xl sm:text-2xl font-semibold">Là thông điệp chính của sự kiện.</p>
-          <p>Nó là dấu vân tay trên quân tốt của bàn cờ. Bạn chọn một nước đi uy lực và đầy dũng khí, trong một hành trình mà bạn tin tưởng là nó dành cho mình.</p>
+          <p>Nó là dấu vân tay trên quân tốt. Bạn chọn một nước đi uy lực và đầy dũng khí, trong một hành trình mà bạn tin tưởng là nó dành cho mình.</p>
           <p>Các hoạt động chủ chốt của Metanoia Chương III sẽ xoay quanh tinh thần Authenticity này.</p>
         </div>
       </div>
@@ -150,8 +150,8 @@ onMounted(() => {
           Bạn đã sẵn sàng chưa?
         </h2>
         <div class="max-w-[300px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p class="text-xl sm:text-2xl font-semibold">Cho một sự kiện 3-trong-1:<br>Góc Nhìn + Trình Diễn + Kết Nối.</p>
-          <p>Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến và hoà vào nhịp đập chung của Metanoia Chương III.</p>
+          <p class="text-xl sm:text-2xl font-semibold">Cho một sự kiện 3-trong-1:<br>Góc Nhìn + Trình Diễn + Kết Bạn.</p>
+          <p>Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến, cùng hoà vào nhịp đập chung của Metanoia Chương III, và tìm gặp thêm những người bạn mới đồng điệu.</p>
         </div>
       </div>
     </div>
