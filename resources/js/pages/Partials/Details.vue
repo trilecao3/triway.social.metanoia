@@ -117,8 +117,8 @@ import { Badge } from '@/components/ui/badge';
       </h1>
 
       <div class="flex items-center justify-center mt-20 sm:mt-10 space-x-5">
-        <div class="w-1/2 relative flex flex-col-reverse sm:flex-rpw sm:min-h-[400px]">
-          <div class="relative z-10 sm:mt-40 w-[250px] flex flex-col space-y-3 sm:space-y-5">
+        <div class="w-1/2 relative flex flex-col-reverse sm:flex-row sm:min-h-[400px]">
+          <div class="relative z-10 sm:mt-40 w-fit ml-3 sm:ml-0 sm:w-[250px] flex flex-col space-y-3 sm:space-y-5">
             <h2 class="text-3xl sm:text-7xl text-blue-700 font-bold tracking-tight">Plato.</h2>
             <div class="grid grid-cols-1 gap-2 sm:flex sm:flex-col sm:space-y-5">
               <div class="sm:mx-auto text-sm sm:text-xl text-blue-700 leading-5 sm:leading-6">

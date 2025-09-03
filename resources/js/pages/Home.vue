@@ -62,7 +62,7 @@ function preloadImages() {
         progress.value = Math.min(100, Math.ceil(percent / 5) * 5);
 
         if (loaded === frameCount) {
-          progress.value = 100; // make sure we end exactly at 100%
+          progress.value = 100;
           resolve();
         }
       };
