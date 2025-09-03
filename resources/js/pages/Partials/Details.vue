@@ -2,7 +2,7 @@
 import { Badge } from '@/components/ui/badge';
 </script>
 <template>
-  <section class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
+  <div class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
     <div class="w-full md:max-w-3xl 2xl:max-w-4xl pt-14 sm:pt-28 space-y-14 sm:space-y-20">
       <div class="w-full flex items-center justify-between">
         <div class="text-6xl font-bold leading-12 tracking-tight">
@@ -83,9 +83,9 @@ import { Badge } from '@/components/ui/badge';
         </div>
       </div>
     </div>
-  </section>
-  <section class="pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
-    <div class="-mb-32 relative z-10 max-w-[300px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
+  </div>
+  <div class="pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
+    <div class="-mb-32 relative z-10 max-w-[320px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
       <div class="w-full flex flex-col gap-y-5 sm:flex-row items-center justify-between">
         <div class="text-6xl font-bold leading-14 tracking-tight">
           <img src="/images/Location_Tittle.png" alt="Agenda Icon" class="h-20 sm:h-28" />
@@ -103,9 +103,9 @@ import { Badge } from '@/components/ui/badge';
     <img src="/images/soho-ballroom.png" alt="Soho Ballroom" class="w-full h-[70vh] object-top object-cover" />
     <div class="absolute bottom-0 left-0 w-full h-76 bg-gradient-to-t from-[#FEFBF6] via-[#FEFBF6]/80 to-transparent">
     </div>
-  </section>
+  </div>
 
-  <section class="pt-10 pb-20 px-5 sm:px-0 relative w-full items-center justify-center bg-[#FEFBF6]">
+  <div class="pt-10 pb-20 px-5 sm:px-0 relative w-full items-center justify-center bg-[#FEFBF6]">
     <div class="w-full sm:max-w-3xl md:max-w-4xl mx-auto sm:px-6">
       <h1 class="-mb-8 font-bold tracking-tighter text-5xl text-center">
         <span
@@ -146,7 +146,7 @@ import { Badge } from '@/components/ui/badge';
                 <p class="font-semibold leading-5">Đặc biệt</p>
                 <p class="leading-5">2.500.000 VND</p>
               </div>
-              <p class="leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
+              <p class="mt-5 sm:mt-0 leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
                 Giới hạn 20 người.<br>
                 Trải nghiệm tiệc tối thân mật trước ngày sự kiện.
               </p>
@@ -183,10 +183,10 @@ import { Badge } from '@/components/ui/badge';
           </a>
         </div>
 
-        <p class="mt-8 max-w-2xl italic text-sm sm:text-base">* Lưu ý: BTC không hỗ trợ refund sau khi bạn đã mua vé. Bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
+        <p class="mt-8 max-w-2xl italic text-sm sm:text-base">* Lưu ý: Chỉ dùng link Google Form được gửi từ các nguồn chính thức của The Tri Way. BTC sẽ không hỗ trợ refund sau khi bạn đã mua vé, bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
       </div>
 
       <div class="absolute left-0 bottom-0 bg-[url('/images/Crowded.png')] bg-no-repeat sm:bg-repeat bg-top w-full h-[30vh] bg-cover 2xl:bg-contain"></div>
     </div>
-  </section>
+  </div>
 </template>

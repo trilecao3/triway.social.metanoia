@@ -34,7 +34,7 @@ const loopWords = [...words, ...words, ...words, ...words];
 const opacities = ref(loopWords.map(() => randomOpacity()))
 </script>
 <template>
-  <section
+  <div
     class="relative flex h-screen w-full bg-black/97 text-white"
   >
     <div class="absolute z-30 top-0 w-full overflow-hidden bg-transparent sm:-mt-5">
@@ -83,7 +83,7 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <style scoped>
 @keyframes marquee {

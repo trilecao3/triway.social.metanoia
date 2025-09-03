@@ -110,7 +110,7 @@ onMounted(() => {
 });
 </script>
 <template>
-   <section class="animation-section relative h-[260vh] w-full">
+   <div class="animation-section relative h-[260vh] w-full">
     <!-- Sticky Canvas -->
     <canvas ref="canvasEl" class="sticky top-0 left-0 h-screen w-full"></canvas>
 
@@ -164,5 +164,5 @@ onMounted(() => {
       </div>
     </div>
     <!-- Keep adding folds -->
-  </section>
+  </div>
 </template>
