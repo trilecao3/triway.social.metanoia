@@ -7,105 +7,157 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const canvasEl = ref(null);
-const frameCount = 300;
-const currentFrame = (i) =>
-  `/images/pawnbg/PawnComp_${String(i).padStart(5, "0")}.jpg`;
 
 onMounted(() => {
   const canvas = canvasEl.value;
-  const context = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
-  const images = [];
-  const imgSeq = { frame: 0 };
+  // ---------- CONFIG (change these) ----------
+  const VIDEO_SRC = "/videos/sequence.mp4"; // <-- change to your video file path
+  const SHIFT_X_PX = -30; // <-- optional horizontal shift like your old code
+  const SCRUB_SMOOTHNESS = 0.6; // lower = tighter, higher = smoother
+  // -------------------------------------------
 
-  // preload frames
-  let loadedImages = 0;
-  for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-    img.onload = () => {
-      loadedImages++;
-      if (loadedImages === frameCount) {
-        initAnimation();
-        render();
-      }
-    };
-    images.push(img);
+  // DPR-aware canvas sizing variables
+  let dpr = window.devicePixelRatio || 1;
+
+  // Create & append hidden video element
+  const video = document.createElement("video");
+  video.src = VIDEO_SRC;
+  video.preload = "auto";
+  video.muted = true;
+  video.playsInline = true;
+  video.controls = false;
+  video.style.display = "none";
+  document.body.appendChild(video);
+
+  // small object we animate with GSAP
+  const scrub = { progress: 0 };
+
+  // render loop RAF id
+  let rafId = null;
+
+  // utility: resize canvas to window and set DPR correctly
+  function resizeCanvas() {
+    dpr = window.devicePixelRatio || 1;
+    // set internal pixel buffer size
+    canvas.width = Math.round(window.innerWidth * dpr);
+    canvas.height = Math.round(window.innerHeight * dpr);
+    // keep CSS size as device independent pixels
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
+    // map drawing operations to CSS pixels
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  // helper: draw image as "cover"
-  function drawCoverImage(ctx, img, canvas) {
-    const canvasRatio = canvas.width / canvas.height;
-    const imgRatio = img.width / img.height;
+  // draw video with "cover" behaviour (preserve aspect, crop)
+  function drawVideoCover() {
+    // logical canvas size (CSS px)
+    const cw = canvas.width / dpr;
+    const ch = canvas.height / dpr;
 
-    let renderWidth, renderHeight, xOffset, yOffset;
+    const vw = video.videoWidth;
+    const vh = video.videoHeight;
+    if (!vw || !vh) return;
 
-    if (imgRatio > canvasRatio) {
-      // Image is wider → fit height
-      renderHeight = canvas.height;
-      renderWidth = img.width * (canvas.height / img.height);
-      xOffset = (canvas.width - renderWidth) / 2;
+    const canvasRatio = cw / ch;
+    const videoRatio = vw / vh;
+
+    let renderW, renderH, xOffset, yOffset;
+
+    if (videoRatio > canvasRatio) {
+      // video wider than canvas → fit height, crop sides
+      renderH = ch;
+      renderW = (vw * ch) / vh;
+      xOffset = (cw - renderW) / 2;
       yOffset = 0;
     } else {
-      // Image is taller → fit width
-      renderWidth = canvas.width;
-      renderHeight = img.height * (canvas.width / img.width);
+      // video taller than canvas → fit width, crop top/bottom
+      renderW = cw;
+      renderH = (vh * cw) / vw;
       xOffset = 0;
-      yOffset = (canvas.height - renderHeight) / 2;
+      yOffset = (ch - renderH) / 2;
     }
 
-    const shiftX = -30; // adjust px as you like
-    xOffset += shiftX;
+    // apply optional horizontal pixel shift
+    xOffset += SHIFT_X_PX;
 
-    ctx.drawImage(img, xOffset, yOffset, renderWidth, renderHeight);
+    // clear & draw
+    ctx.clearRect(0, 0, cw, ch);
+    // drawImage expects CSS px coordinates when using setTransform(dpr,...)
+    ctx.drawImage(video, xOffset, yOffset, renderW, renderH);
   }
 
-  function initAnimation() {
-    gsap.to(imgSeq, {
-      frame: frameCount - 1,
-      snap: "frame",
+  // continuous render loop — redraw as video.time changes
+  function startRenderLoop() {
+    function loop() {
+      // If requestVideoFrameCallback is available you could use it for more reliability,
+      // but we keep RAF for broad compatibility:
+      drawVideoCover();
+      rafId = requestAnimationFrame(loop);
+    }
+    if (!rafId) loop();
+  }
+
+  function stopRenderLoop() {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = null;
+  }
+
+  // Called when video metadata is available (dimensions + duration)
+  function onVideoReady() {
+    // ensure canvas sized correctly
+    resizeCanvas();
+
+    // Try to prime decoding on some platforms (helps iOS / Safari)
+    // (muted + playsInline allows autoplay)
+    video.play().then(() => video.pause()).catch(() => { /* ignore */ });
+
+    // GSAP drives scrub.progress from 0 -> 1
+    gsap.to(scrub, {
+      progress: 1,
       ease: "none",
       scrollTrigger: {
-        scrub: 1,
+        scrub: SCRUB_SMOOTHNESS,
         trigger: ".animation-section",
         start: "top top",
         end: "bottom bottom",
       },
-      onUpdate: render,
+      onUpdate: () => {
+        // map progress to video time (clamp)
+        const dur = video.duration || 0.0001;
+        const t = Math.min(Math.max(scrub.progress, 0), 1) * dur;
+        // assign currentTime (seeking). keep small threshold to reduce unnecessary seeks:
+        if (Math.abs(video.currentTime - t) > 0.01) {
+          video.currentTime = t;
+        }
+      },
     });
+
+    // start RAF render loop that draws the current video frame onto canvas
+    startRenderLoop();
   }
 
-  function render() {
-    const frameIndex = Math.floor(imgSeq.frame);
-    const nextIndex = (frameIndex + 1) % frameCount;
-    const progress = imgSeq.frame - frameIndex;
-
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // draw current frame
-    context.globalAlpha = 1 - progress;
-    drawCoverImage(context, images[frameIndex], canvas);
-
-    // draw next frame blended
-    context.globalAlpha = progress;
-    drawCoverImage(context, images[nextIndex], canvas);
-
-    context.globalAlpha = 1;
-  }
-
-  // responsive canvas
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    render();
-  }
-
-  resizeCanvas();
+  // event listeners
+  video.addEventListener("loadedmetadata", onVideoReady);
   window.addEventListener("resize", resizeCanvas);
 
+  // If video has already loaded metadata before listener attached:
+  if (video.readyState >= 1 && video.videoWidth && video.videoHeight) {
+    onVideoReady();
+  }
+
+  // ---------- cleanup ----------
   onBeforeUnmount(() => {
+    stopRenderLoop();
     window.removeEventListener("resize", resizeCanvas);
+    video.removeEventListener("loadedmetadata", onVideoReady);
+    // remove appended video element
+    if (video.parentNode) video.parentNode.removeChild(video);
+    // kill ScrollTrigger instances
     ScrollTrigger.getAll().forEach((st) => st.kill());
+    // kill GSAP tweens on scrub object
+    gsap.killTweensOf(scrub);
   });
 });
 </script>

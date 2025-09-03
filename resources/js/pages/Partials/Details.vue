@@ -37,10 +37,10 @@ import { Badge } from '@/components/ui/badge';
         <div class="flex items-start justify-between gap-x-20 pt-10">
           <div class="w-1/4">
             <p class="flex flex-col font-bold text-[6rem] leading-none text-red-700 tracking-tighter">26<span class="-mt-3 text-black text-lg font-medium tracking-tight">Tháng 10</span></p>
-            <div class="mt-3">
-              <Badge class="font-bold mb-2 bg-red-700">Ngày sự kiện chính</Badge>
-              <Badge variant="secondary" class="font-bold mr-1">Vé Jung</Badge> + 
-              <Badge variant="secondary" class="font-bold mt-1 sm:mt-0 sm:ml-1">Vé Plato</Badge>
+            <div class="mt-3 grid grid-cols-1 gap-2">
+              <Badge class="font-bold bg-red-700 text-white">Ngày sự kiện chính</Badge>
+              <Badge variant="secondary" class="font-bold">Vé Jung</Badge>
+              <Badge variant="secondary" class="font-bold">Vé Plato</Badge>
             </div>
           </div>
           <div class="w-3/4 flex flex-col sm:flex-row">
