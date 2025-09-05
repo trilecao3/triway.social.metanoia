@@ -206,7 +206,7 @@ onMounted(() => {
     <!-- Overlays (each takes 100vh inside the 500vh scroll area) -->
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/60 -ml-2 sm:-ml-5 -rotate-[6deg]">Message</span>
           Lời đầu từ The Tri Way
         </h2>
@@ -220,27 +220,29 @@ onMounted(() => {
 
     <div class="absolute top-[80vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Authenticity</span>
           Sự Chân Thực Cá Nhân
         </h2>
         <div class="max-w-[280px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
           <p class="text-xl sm:text-2xl font-semibold">Là thông điệp chính của sự kiện.</p>
-          <p>Nó là dấu vân tay trên quân tốt. Bạn chọn một nước đi uy lực và đầy dũng khí, trong một hành trình mà bạn tin tưởng là nó dành cho mình.</p>
-          <p>Các hoạt động chủ chốt của Metanoia Chương III sẽ xoay quanh tinh thần Authenticity này.</p>
+          <p>Bao gồm 3 phần chính: Góc Nhìn (The Speech) + Trình Diễn (The Performance) + Kết Bạn (The Connection).</p>
+          <p>Các hoạt động chủ chốt của Metanoia Chương III sẽ xoay quanh tinh thần Authenticity / Chân Thực này.</p>
         </div>
       </div>
     </div>
 
     <div class="absolute top-[140vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-1 sm:gap-y-6">
-          <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Are you ready?</span>
-          Bạn đã sẵn sàng chưa?
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
+          <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Why?</span>
+          Tại sao bạn nên tham gia?
         </h2>
-        <div class="max-w-[300px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p class="text-xl sm:text-2xl font-semibold">Cho một sự kiện 3-trong-1:<br>Góc Nhìn + Trình Diễn + Kết Bạn.</p>
-          <p>Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến, cùng hoà vào nhịp đập chung của Metanoia Chương III, và tìm gặp thêm những người bạn mới đồng điệu.</p>
+        <div class="max-w-[300px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-2">
+          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">Gặp những người bạn mới.</p>
+          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">Thêm những góc nhìn mới.</p>
+          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">Thiết lập một chương mới.</p>
+          <p class="!mt-5">Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến, cùng hoà vào nhịp đập chung của Metanoia Chương III.</p>
         </div>
       </div>
     </div>
