@@ -1,5 +1,17 @@
 <script setup>
 import { Badge } from '@/components/ui/badge';
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose
+} from "@/components/ui/dialog";
+
 </script>
 <template>
   <div class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
@@ -14,8 +26,8 @@ import { Badge } from '@/components/ui/badge';
         </div>
       </div>
 
-      <div class="w-full space-y-10">
-        <div class="flex items-center justify-between gap-x-20">
+      <div class="w-full space-y-12">
+        <div class="flex items-start justify-between gap-x-20">
           <div class="w-1/4">
             <p class="flex flex-col font-bold text-[6rem] leading-none text-blue-700 tracking-tighter">25<span class="-mt-3 text-black text-lg font-medium tracking-tight">Tháng 10</span></p>
             <Badge variant="secondary" class="font-bold block mt-3">Vé Jung</Badge>
@@ -28,6 +40,29 @@ import { Badge } from '@/components/ui/badge';
             </div>
             <div class="w-full sm:w-1/2 text-right text-base sm:text-xl">
               <p>Tiệc tối thân mật cùng The Tri Way. Giới hạn 20 người tham dự.</p>
+
+              <Dialog>
+                <DialogTrigger as-child>
+                  <Button variant="outline" class="mt-4 bg-transparent text-base font-bold tracking-normal rounded-full px-5 sm:px-7 h-10 sm:h-11 border-black">
+                    Tìm hiểu vé Jung
+                  </Button>
+                </DialogTrigger>
+                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
+                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                  </DialogHeader>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
+                    <p></p>
+                  </div>
+                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
+                    <DialogClose as-child>
+                      <Button type="button" variant="secondary">
+                        Đóng
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
@@ -49,11 +84,34 @@ import { Badge } from '@/components/ui/badge';
             </div>
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần I: Góc Nhìn</p>
-              <p class="text-base font-light mt-2 leading-snug">Những chia sẻ lớn cho tâm trí từ The Tri Way và diễn giả khách mời. Q&A cùng người tham dự.</p>
+              <p class="text-base font-light mt-2 leading-snug">Những chia sẻ lớn cho tâm trí từ The Tri Way và diễn giả khách mời + Q&A.</p>
+
+              <Dialog>
+                <DialogTrigger as-child>
+                  <Button variant="outline" class="mt-4 bg-transparent text-base font-bold tracking-normal rounded-full px-5 sm:px-7 h-10 sm:h-11 border-black">
+                    Đọc thêm
+                  </Button>
+                </DialogTrigger>
+                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
+                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                  </DialogHeader>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
+                    <p></p>
+                  </div>
+                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
+                    <DialogClose as-child>
+                      <Button type="button" variant="secondary">
+                        Đóng
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between gap-x-20 -mt-12 sm:-mt-20">
+        <div class="flex items-center justify-between gap-x-20 -mt-5 sm:-mt-16">
           <div class="w-1/4">
             <p class="font-bold text-6xl text-blue-700 tracking-tighter invisible">26.10</p>
           </div>
@@ -64,6 +122,29 @@ import { Badge } from '@/components/ui/badge';
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần II: Trình Diễn</p>
               <p class="text-base font-light mt-2 leading-snug">Những tiết mục biểu diễn từ các nghệ sĩ khách mời.</p>
+
+              <Dialog>
+                <DialogTrigger as-child>
+                  <Button variant="outline" class="mt-4 bg-transparent text-base font-bold tracking-normal rounded-full px-5 sm:px-7 h-10 sm:h-11 border-black">
+                    Đọc thêm
+                  </Button>
+                </DialogTrigger>
+                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
+                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                  </DialogHeader>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
+                    <p></p>
+                  </div>
+                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
+                    <DialogClose as-child>
+                      <Button type="button" variant="secondary">
+                        Đóng
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
@@ -78,6 +159,28 @@ import { Badge } from '@/components/ui/badge';
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần III: Kết Nối</p>
               <p class="text-base font-light mt-2 leading-snug">Các trạm sáng tạo và kết nối cộng đồng giữa những người tham dự.</p>
+              <Dialog>
+                <DialogTrigger as-child>
+                  <Button variant="outline" class="mt-4 bg-transparent text-base font-bold tracking-normal rounded-full px-5 sm:px-7 h-10 sm:h-11 border-black">
+                    Đọc thêm
+                  </Button>
+                </DialogTrigger>
+                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
+                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                  </DialogHeader>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
+                    <p></p>
+                  </div>
+                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
+                    <DialogClose as-child>
+                      <Button type="button" variant="secondary">
+                        Đóng
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
@@ -107,9 +210,9 @@ import { Badge } from '@/components/ui/badge';
 
   <div class="pt-10 pb-20 px-5 sm:px-0 relative w-full items-center justify-center bg-[#FEFBF6]">
     <div class="w-full sm:max-w-3xl md:max-w-4xl mx-auto sm:px-6">
-      <h1 class="-mb-8 font-bold tracking-tighter text-5xl text-center">
+      <h1 class="-mb-8 font-bold tracking-tight text-4xl sm:text-5xl text-center">
         <span
-          class="-mb-3 text-6xl block font-display text-center rotate-[-4deg] mx-auto font-light text-red-600"
+          class="-mb-1 text-5xl sm:text-6xl block font-display text-center rotate-[-4deg] mx-auto font-light text-red-600"
         >
           the ticket
         </span>
@@ -139,14 +242,14 @@ import { Badge } from '@/components/ui/badge';
           <img src="/images/Plato_Portrait.png" alt="Plato Ticket" class="sm:absolute right-0 top-0 sm:top-0 w-[90%] h-auto object-contain sm:w-[75%]" />
         </div>
         <div class="w-1/2 relative flex flex-col-reverse sm:flex-row sm:min-h-[570px]">
-          <div class="sm:absolute -bottom-5 z-10 flex flex-col gap-y-3 xl:flex-row sm:-ml-0 gap-x-16 justify-between w-full max-w-md">
+          <div class="sm:absolute -bottom-5 z-10 flex flex-col gap-y-3 xl:flex-row sm:-ml-0 -mt-4 gap-x-16 justify-between w-full max-w-md">
             <h2 class="text-3xl sm:text-7xl text-red-700 font-bold tracking-tight">Jung.</h2>
             <div class="sm:-mr-6 xl:-mr-28">
               <div class="block sm:hidden text-red-600 text-base sm:text-xl mb-1">
                 <p class="font-semibold leading-5">Đặc biệt</p>
                 <p class="leading-5">2.500.000 VND</p>
               </div>
-              <p class="mt-5 sm:mt-0 leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
+              <p class="mt-3 sm:mt-0 leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
                 Giới hạn 20 người.<br>
                 Trải nghiệm tiệc tối thân mật trước ngày sự kiện.
               </p>
@@ -167,7 +270,7 @@ import { Badge } from '@/components/ui/badge';
       </div>
 
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
-        <h2 class="text-4xl font-bold tracking-tighter">Các cách mua vé</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Các cách mua vé</h2>
         <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
           <a href="#" class="block p-4 sm:p-5 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
             <div>

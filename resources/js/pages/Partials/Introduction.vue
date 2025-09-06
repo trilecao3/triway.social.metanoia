@@ -19,7 +19,7 @@ onMounted(() => {
   // -------------------------------------------
 
   // DPR and offscreen buffer
-  let dpr = window.devicePixelRatio || 1;
+  let dpr = /Mobi|Android/i.test(navigator.userAgent) ? 1 : window.devicePixelRatio || 1;
   const offscreen = document.createElement("canvas");
   const offCtx = offscreen.getContext("2d");
 
@@ -27,6 +27,7 @@ onMounted(() => {
   const video = document.createElement("video");
   video.src = VIDEO_SRC;
   video.preload = "auto";
+  video.autoplay = true;
   video.muted = true;
   video.playsInline = true;
   video.style.display = "none";
@@ -37,7 +38,7 @@ onMounted(() => {
 
   // Resize both canvases for DPR
   function resizeCanvas() {
-    dpr = window.devicePixelRatio || 1;
+    dpr = /Mobi|Android/i.test(navigator.userAgent) ? 1 : window.devicePixelRatio || 1;
 
     // visible canvas
     canvas.width = Math.round(window.innerWidth * dpr);
@@ -99,6 +100,7 @@ onMounted(() => {
 
   // Draw-ready handler: run this ONLY when a decoded frame is available
   function onFrameReady() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     // 1) paint to offscreen using CSS pixel dims
     drawVideoToOffscreen();
     // 2) copy to main canvas (visible)
@@ -206,7 +208,7 @@ onMounted(() => {
     <!-- Overlays (each takes 100vh inside the 500vh scroll area) -->
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/60 -ml-2 sm:-ml-5 -rotate-[6deg]">Message</span>
           Lời đầu từ The Tri Way
         </h2>
@@ -220,7 +222,7 @@ onMounted(() => {
 
     <div class="absolute top-[80vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Authenticity</span>
           Sự Chân Thực Cá Nhân
         </h2>
@@ -234,7 +236,7 @@ onMounted(() => {
 
     <div class="absolute top-[140vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tighter mb-7 flex flex-col gap-y-2 sm:gap-y-9">
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Why?</span>
           Tại sao bạn nên tham gia?
         </h2>
