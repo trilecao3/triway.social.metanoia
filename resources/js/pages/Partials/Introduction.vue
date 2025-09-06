@@ -19,9 +19,9 @@ onMounted(() => {
   const SCRUB_SMOOTHNESS = isMobile ? 0.1 : 0.8;
   // ----------------------------
 
-  // Preload images
   const images = [];
   let loaded = 0;
+  const scrub = { frame: 0 };
 
   function preloadImages() {
     return new Promise((resolve) => {
@@ -41,21 +41,31 @@ onMounted(() => {
     const img = images[index];
     if (!img) return;
 
-    // cover fill
     const canvasRatio = canvas.width / canvas.height;
     const imgRatio = img.width / img.height;
 
     let renderW, renderH, xOffset, yOffset;
     if (imgRatio > canvasRatio) {
+      // image is wider → fit height
       renderH = canvas.height;
       renderW = img.width * (canvas.height / img.height);
       xOffset = (canvas.width - renderW) / 2;
       yOffset = 0;
     } else {
+      // image is taller → fit width
       renderW = canvas.width;
       renderH = img.height * (canvas.width / img.width);
       xOffset = 0;
       yOffset = (canvas.height - renderH) / 2;
+    }
+
+    // --- dynamic mobile shift ---
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    if (isMobile) {
+      const t = index / (frameCount - 1); // 0 → 1 across scroll
+      // Start -120px, end -200px
+      const shift = -120 - (t >= 2/3 ? (t - 2/3) / (1/3) * 150 : 0);
+      xOffset += shift;
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -68,14 +78,15 @@ onMounted(() => {
     canvas.height = Math.round(window.innerHeight * dpr);
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    // remove scaling transform — we already calculate with DPR
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+    // redraw current frame properly with cover fit
     drawFrame(Math.floor(scrub.frame));
   }
 
-  const scrub = { frame: 0 };
-
   preloadImages().then(() => {
-    // draw first frame
     drawFrame(0);
 
     gsap.to(scrub, {
