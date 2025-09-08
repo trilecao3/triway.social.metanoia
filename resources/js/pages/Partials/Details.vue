@@ -11,6 +11,7 @@ import {
   DialogTrigger,
   DialogClose
 } from "@/components/ui/dialog";
+import Jung from './Dialogs/Jung.vue';
 
 </script>
 <template>
@@ -29,7 +30,7 @@ import {
       <div class="w-full space-y-12">
         <div class="flex items-start justify-between gap-x-20">
           <div class="w-1/4">
-            <p class="flex flex-col font-bold text-[6rem] leading-none text-blue-700 tracking-tighter">25<span class="-mt-3 text-black text-lg font-medium tracking-tight">Tháng 10</span></p>
+            <p class="flex flex-col font-bold text-[6rem] leading-none text-blue-700 tracking-tighter">25<span class="-mt-2 text-black text-xl sm:text-2xl font-medium tracking-tight">Tháng 10</span></p>
             <Badge variant="secondary" class="font-bold block mt-3">Vé Jung</Badge>
           </div>
           <div class="w-3/4 flex flex-col sm:flex-row">
@@ -39,30 +40,8 @@ import {
               </p>
             </div>
             <div class="w-full sm:w-1/2 text-right text-base sm:text-xl">
-              <p>Tiệc tối thân mật cùng The Tri Way. Giới hạn 20 người tham dự.</p>
-
-              <Dialog>
-                <DialogTrigger as-child>
-                  <Button variant="outline" class="mt-4 bg-transparent text-base font-bold tracking-normal rounded-full px-5 sm:px-7 h-10 sm:h-11 border-black">
-                    Tìm hiểu vé Jung
-                  </Button>
-                </DialogTrigger>
-                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
-                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
-                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
-                  </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
-                    <p></p>
-                  </div>
-                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
-                    <DialogClose as-child>
-                      <Button type="button" variant="secondary">
-                        Đóng
-                      </Button>
-                    </DialogClose>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
+              <p>Tiệc tối cùng The Tri Way đêm trước sự kiện chính. Giới hạn 20 người tham dự.</p>
+              <Jung />
             </div>
           </div>
         </div>
@@ -71,7 +50,7 @@ import {
         
         <div class="flex items-start justify-between gap-x-20 pt-10">
           <div class="w-1/4">
-            <p class="flex flex-col font-bold text-[6rem] leading-none text-red-700 tracking-tighter">26<span class="-mt-3 text-black text-lg font-medium tracking-tight">Tháng 10</span></p>
+            <p class="flex flex-col font-bold text-[6rem] leading-none text-red-700 tracking-tighter">26<span class="-mt-2 text-black text-xl sm:text-2xl font-medium tracking-tight">Tháng 10</span></p>
             <div class="mt-3 grid grid-cols-1 gap-2">
               <Badge class="font-bold bg-red-700 text-white">Ngày sự kiện chính</Badge>
               <Badge variant="secondary" class="font-bold">Vé Jung</Badge>

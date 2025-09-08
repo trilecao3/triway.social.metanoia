@@ -1,17 +1,24 @@
-<script></script>
+<script setup>
+import Carousel from './Carousel.vue';
+
+</script>
 <template>
-  <div class="relative flex min-h-[80vh] w-full bg-[#15181B] text-white py-32">
+  <div class="relative w-full bg-[#15181B] text-white py-32">
     <div class="w-full max-w-4xl mx-auto text-center">
       <h1 class="font-bold tracking-tighter text-4xl sm:text-5xl text-center">
         AI hỏi đáp tất cả về<br><span class="font-light text-4xl tracking-tight">Metanoia Chương III</span>
       </h1>
 
-      <div class="mt-24">
+      <div class="mt-16">
         <input type="text" placeholder="Nhập câu hỏi của bạn..." class="w-full max-w-[300px] sm:max-w-md mx-auto px-6 py-5 rounded-lg bg-[#FEFBF6] text-black focus:outline-none font-medium text-xl" />
       </div>
     </div>
 
-    <div class="absolute w-full bottom-0 left-0 py-8 px-6 border-t border-dashed border-white/30 flex flex-row items-start sm:items-center justify-between">
+    <div class="w-full mt-32">
+      <Carousel />
+    </div>
+
+    <div class="absolute w-full bottom-0 left-0 py-8 px-6 border-dashed border-white/30 flex flex-row items-start sm:items-center justify-between">
       <div class="hidden sm:block w-1/3">
         <p class="tracking-tight sm:text-lg xl:text-xl">
           <b class="font-extrabold">Metanoia</b> Chương III
@@ -36,8 +43,8 @@
         <p>&copy; 2025 Triway Social. All rights reserved.</p>
         <a href="https://triway.social/metanoia" class="font-bold">triway.social/metanoia</a>
       </div>
-      <div class="sm:w-1/3 text-right">
-        <a href="https://instagram.com/triway.social" target="_blank"><img src="/images/igicon.svg" alt="Instagram" class="inline-block w-8 h-8 sm:w-10 sm:h-10" /></a>
+      <div class="sm:w-1/3 text-right shrink-0">
+        <a href="https://instagram.com/triway.social" target="_blank"><img src="/images/logo/tws-logo.png" alt="Instagram" class="inline-block w-auto h-11 sm:h-12" /></a>
       </div>
     </div>
   </div>
