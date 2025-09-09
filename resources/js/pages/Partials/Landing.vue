@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import Carousel from "./Carousel.vue";
 
 const daysUntilTarget = computed(() => {
   const today = new Date();
@@ -37,27 +38,16 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
   <div
     class="relative flex h-screen w-full bg-black/97 text-white"
   >
-    <div class="absolute z-30 top-0 w-full overflow-hidden bg-transparent sm:-mt-5">
-      <div class="flex whitespace-nowrap animate-marquee">
-        <span
-          v-for="(word, i) in loopWords"
-          :key="i"
-          class="mx-2 sm:mx-5 xl:mx-6 2xl:mx-6 text-[3rem] sm:text-[6rem] xl:text-[7rem] 2xl:text-[7.5rem] tracking-tighter font-bold cursor-default select-none"
-          :style="{ opacity: opacities[i] }"
-        >
-          {{ word }}
-        </span>
-      </div>
-    </div>
+    <Carousel class="absolute z-30 top-0 w-full overflow-hidden bg-transparent sm:-mt-5" :show="`row1`" />
 
     <div class="w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:flex-row sm:gap-x-10 xl:gap-x-16 items-center justify-center sm:justify-between">
-      <div class="w-full sm:w-1/2 text-5xl font-bold">
+      <div class="-mt-10 sm:mt-0 w-full sm:w-1/2 text-5xl font-bold">
         <img src="/images/window-of-metanoia.png" alt="Metanoia Logo" class="w-[80%] mx-auto sm:w-full" />
       </div>
       <div class="w-full sm:w-1/2">
         <div class="-mt-8 sm:-mt-5">
           <div class="flex items-center justify-center sm:justify-start gap-x-3 sm:gap-x-7 opacity-75">
-            <h1 class="text-[4rem] sm:text-[7rem] xl:text-[9rem] font-extrabold tracking-tight">
+            <h1 class="text-[4.5rem] sm:text-[7rem] xl:text-[9rem] font-extrabold tracking-tight">
               <span v-if="daysUntilTarget.length === 2">
                 {{ daysUntilTarget[0] }}
               </span>
@@ -65,18 +55,18 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
                 {{ daysUntilTarget.length === 2 ? daysUntilTarget[1] : daysUntilTarget[0] }}
               </span>
             </h1>
-            <span class="text-[1.69rem] sm:text-[3rem] xl:text-[3.8rem] font-bold leading-8 sm:leading-13 xl:leading-17 tracking-tight -mt-1.5">
+            <span class="text-[1.75rem] sm:text-[3rem] xl:text-[3.8rem] font-bold leading-9 sm:leading-13 xl:leading-17 tracking-tight -mt-1 sm:-mt-1.5">
               ngày<br>
               <span class="bg-gradient-to-r from-gray-50 to-gray-300/50 bg-clip-text text-transparent">đến với</span>
             </span>
           </div>
           <div class="mx-auto sm:mx-0 -mt-2 sm:mt-0 block w-fit">
-            <h1 class="text-2xl sm:text-4xl xl:text-5xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
-            <span class="block -mt-1 sm:mt-0 font-display text-3xl sm:text-5xl xl:text-6xl text-center rotate-[-4deg] mx-auto">authenticity</span>
+            <h1 class="text-xl sm:text-4xl xl:text-5xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
+            <span class="block -mt-1 sm:mt-0 font-display text-2xl sm:text-5xl xl:text-6xl text-center rotate-[-4deg] mx-auto">authenticity</span>
           </div>
           <div class="mt-9 sm:mt-20 text-center sm:text-left">
             <p class="text-sm sm:text-base font-medium">Thiết kế & tổ chức bởi</p>
-            <img src="/images/logo/tws-logo.png" alt="Triway Social Logo" class="inline-block w-20 sm:w-28 mt-2" />
+            <img src="/images/logo/tws-logo.png" alt="Triway Social Logo" class="inline-block w-16 sm:w-24 mt-2" />
             <!-- <p>Thiết kế & tổ chức bởi</p>
             <p class="uppercase">
               <b>The Tri Way</b> x <b>Triway Social Team</b>
@@ -85,6 +75,8 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
         </div>
       </div>
     </div>
+
+    <Carousel class="absolute z-30 bottom-0 w-full overflow-hidden bg-transparent" :show="`row2`" />
   </div>
 </template>
 <style scoped>

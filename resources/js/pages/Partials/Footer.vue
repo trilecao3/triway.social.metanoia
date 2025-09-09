@@ -14,11 +14,11 @@ import Carousel from './Carousel.vue';
       </div>
     </div>
 
-    <div class="w-full mt-32">
+    <div class="w-full mt-32 mb-5 ">
       <Carousel />
     </div>
 
-    <div class="absolute w-full bottom-0 left-0 py-8 px-6 border-dashed border-white/30 flex flex-row items-start sm:items-center justify-between">
+    <div class="absolute w-full bottom-0 left-0 p-5 sm:py-8 sm:px-6 border-dashed border-white/30 flex flex-row items-start sm:items-center justify-between">
       <div class="hidden sm:block w-1/3">
         <p class="tracking-tight sm:text-lg xl:text-xl">
           <b class="font-extrabold">Metanoia</b> Chương III
