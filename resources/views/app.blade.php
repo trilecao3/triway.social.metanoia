@@ -36,6 +36,8 @@
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         @vite(['resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
         @inertiaHead
+
+        <script src="https://widget.thrii.test/embed.js"></script>
     </head>
     <body class="font-sans antialiased text-black">
         @inertia

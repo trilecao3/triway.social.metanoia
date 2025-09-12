@@ -9,8 +9,12 @@ import Carousel from './Carousel.vue';
         AI hỏi đáp tất cả về<br><span class="font-light text-4xl tracking-tight">Metanoia Chương III</span>
       </h1>
 
-      <div class="mt-16">
-        <input type="text" placeholder="Nhập câu hỏi của bạn..." class="w-full max-w-[300px] sm:max-w-md mx-auto px-6 py-5 rounded-lg bg-[#FEFBF6] text-black focus:outline-none font-medium text-xl" />
+      <div class="w-[320px] sm:w-[450px] mx-auto flex justify-center mt-8">
+        <thrii-widget 
+          api-key="thrii_otY28eYOrqhBtVJ5snM5xYI4" 
+          widget-type="inline"
+          class="w-full"
+        ></thrii-widget>
       </div>
     </div>
 
