@@ -35,8 +35,8 @@ const items = ref([
           <X class="w-6 h-6 text-white hover:cursor-pointer" />
         </DialogClose>
       </DialogHeader>
-      <div class="bg-white p-4 sm:px-7 sm:py-7 flex flex-col sm:flex-row gap-y-6 sm:gap-x-14">
-        <div class="sm:w-[55%] font-medium text-black text-sm sm:text-base space-y-2 sm:space-y-3">
+      <div class="bg-[#FEFBF6] p-4 sm:px-7 sm:py-7 flex flex-col sm:flex-row gap-y-6 sm:gap-x-14">
+        <div class="sm:w-[55%] leading-snug font-medium text-black text-base space-y-2 sm:space-y-3">
           <p>Như 2 mùa trước, vé Jung bao gồm trải nghiệm tiệc tối nhóm nhỏ cùng với Trí trước ngày sự kiện chính.</p>
           <p>Đây là dịp để chúng ta có một không gian riêng tư, với thức ăn, âm nhạc, trò chơi và những câu chuyện sâu lắng để chia sẻ cùng nhau.</p>
           <div class="mt-3 sm:mt-5 space-y-2">
@@ -44,10 +44,13 @@ const items = ref([
               <span class="font-bold">Thời gian:</span> 25/10/2025, 18:00 - 22:00
             </div>
             <div>
-              <span class="font-bold">Địa điểm:</span> Hoa Tây Space
+              <span class="font-bold">Địa điểm:</span> Hoa Tây Space, 54 Ký Con, Q1
             </div>
             <div>
               <span class="font-bold">Số lượng:</span> Giới hạn 20 vé
+            </div>
+            <div>
+              <span class="font-bold">Dress code:</span> Tiệc tối, trắng - đen
             </div>
           </div>
         </div>
@@ -56,7 +59,7 @@ const items = ref([
             :stories="items"
             :loop="true"
             :interval="3000"
-            class="h-[270px] sm:h-[300px]"
+            class="h-[210px] sm:h-[250px]"
           />
         </div>
       </div>

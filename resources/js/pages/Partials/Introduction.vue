@@ -123,7 +123,7 @@ onMounted(() => {
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-0 sm:gap-y-5">
-          <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/90 -ml-2 sm:-ml-5 -rotate-[4deg]">Founder Message</span>
+          <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/90 -ml-2 sm:-ml-5 -rotate-[4deg]">From founder</span>
           Lời đầu từ The Tri Way
         </h2>
         <div class="max-w-[290px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
@@ -141,11 +141,10 @@ onMounted(() => {
           Sự Chân Thực
         </h2>
         <div class="max-w-[280px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p class="text-xl sm:text-2xl font-semibold">Là thông điệp chính của sự kiện.</p>
-          <p>Bao gồm 3 phần chính:</p>
+          <p class="text-xl sm:text-2xl font-semibold leading-snug">Là thông điệp chính cho 3 phần trong sự kiện:</p>
           <div class="ml-4">
-            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">1. Thuyết trình chia sẻ góc nhìn.</p>
-            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">2. Tiết mục trình diễn từ nghệ sĩ.</p>
+            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">1. Chia sẻ góc nhìn.</p>
+            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">2. Tiết mục trình diễn.</p>
             <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">3. Giao lưu kết nối.</p>
           </div>
           <p>Các hoạt động chủ chốt của Metanoia Chương III sẽ xoay quanh tinh thần Authenticity / Chân Thực này.</p>
@@ -157,7 +156,7 @@ onMounted(() => {
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
           <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Why join?</span>
-          Một Sự Kiện, Ba Mục Tiêu
+          Tại Sao Bạn Nên Đến?
         </h2>
         <div class="max-w-[300px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-2">
           <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">Gặp những người bạn mới.</p>
