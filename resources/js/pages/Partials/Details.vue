@@ -245,32 +245,35 @@ import Jung from './Dialogs/Jung.vue';
 
       <div class="mt-10 sm:mt-20 italic max-w-lg space-y-0.5 text-sm sm:text-base">
         <p>* Early bird kéo dài từ 10/09 đến 05/10.</p>
-        <p>† Sinh viên được giảm 15% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social để được hỗ trợ.</p>
+        <p>† Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social để được hỗ trợ.</p>
       </div>
 
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Các cách mua vé</h2>
-        <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-          <a href="#" class="block p-4 sm:p-5 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+        <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-4">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScfJLhBER-M78BxgKN7l8SKxAQE1DlrFnYXUcNPDpdZKSMzAw/viewform?usp=dialog" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
             <div>
-              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-green-700">Google Form</span></p>
-              <p class="leading-snug">Cho chuyển khoản.</p>
+              <p class="text-base xl:text-lg font-semibold">Qua <span class="text-green-700">Google Form</span></p>
+              <p class="text-sm sm:text-base mt-0.5 leading-snug">Cho chuyển khoản.</p>
             </div>
-            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
           </a>
-          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://vibeji.com/thetriway/event/1002101" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
             <div>
-              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-orange-600">Vibeji</span></p>
-              <p class="leading-snug">Cho thanh toán thẻ.</p>
+              <p class="text-base xl:text-lg font-semibold">Qua <span class="text-orange-600">Vibeji</span></p>
+              <p class="text-sm sm:text-base mt-0.5 leading-snug">Cho thanh toán thẻ.</p>
             </div>
-            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
           </a>
-          <a href="#" class="block p-5 sm:p-6 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://instagram.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
             <div>
-              <p class="text-lg xl:text-xl font-semibold">Với <span class="text-pink-600">Instagram</span></p>
-              <p class="leading-snug">@triway.social hỗ trợ.</p>
+              <p class="text-base xl:text-lg font-semibold">Qua <span class="text-pink-600">Instagram</span></p>
+              <p class="text-sm sm:text-base mt-0.5 leading-snug">@triway.social hỗ trợ.</p>
             </div>
-            <img src="/images/arrow-up-right.svg" class="-mr-2 sm:-mr-3 w-12 shrink-0" />
+          </a>
+          <a href="https://facebook.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+            <div>
+              <p class="text-base xl:text-lg font-semibold">Qua <span class="text-blue-600">Facebook</span></p>
+              <p class="text-sm sm:text-base mt-0.5 leading-snug">@triway.social hỗ trợ.</p>
+            </div>
           </a>
         </div>
 

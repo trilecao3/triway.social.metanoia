@@ -38,11 +38,11 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
   <div
     class="relative flex h-screen w-full bg-black/97 text-white"
   >
-    <Carousel class="absolute z-30 top-0 w-full overflow-hidden bg-transparent sm:-mt-5" :show="`row1`" />
+    <!-- <Carousel class="absolute z-30 top-0 w-full overflow-hidden bg-transparent sm:-mt-5" :show="`row1`" /> -->
 
-    <div class="w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:flex-row sm:gap-x-10 xl:gap-x-16 items-center justify-center sm:justify-between">
+    <div class="-mt-[120px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:flex-row sm:gap-x-10 xl:gap-x-16 items-center justify-center sm:justify-between">
       <div class="-mt-10 sm:mt-0 w-full sm:w-1/2 text-5xl font-bold">
-        <img src="/images/window-of-metanoia.png" alt="Metanoia Logo" class="w-[80%] mx-auto sm:w-full" />
+        <img src="/images/window-of-metanoia.png" alt="Metanoia Logo" class="w-[80%] mx-auto sm:w-[90%]" />
       </div>
       <div class="w-full sm:w-1/2">
         <div class="-mt-8 sm:-mt-5">

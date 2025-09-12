@@ -31,11 +31,11 @@ const row2 = ref(shuffle([...Array(19).keys()].map(i => i + 17)));
       class="flex animate-marquee"
     >
       <template v-for="i in row1" :key="'row1-' + i">
-        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-40 sm:w-56 object-cover shadow-md" />
+        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-32 sm:w-56 object-cover shadow-md" />
       </template>
       <!-- duplicate for smooth loop -->
       <template v-for="i in row1" :key="'row1-dup-' + i">
-        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-40 sm:w-56 object-cover shadow-md" />
+        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-32 sm:w-56 object-cover shadow-md" />
       </template>
     </div>
 
@@ -45,11 +45,11 @@ const row2 = ref(shuffle([...Array(19).keys()].map(i => i + 17)));
       class="flex animate-marquee2"
     >
       <template v-for="i in row2" :key="'row2-' + i">
-        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-40 sm:w-56 object-cover shadow-md" />
+        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-32 sm:w-56 object-cover shadow-md" />
       </template>
       <!-- duplicate -->
       <template v-for="i in row2" :key="'row2-dup-' + i">
-        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-40 sm:w-56 object-cover shadow-md" />
+        <img :src="`/images/community/${i}.jpg`" class="h-24 w-36 sm:h-32 sm:w-56 object-cover shadow-md" />
       </template>
     </div>
   </div>
