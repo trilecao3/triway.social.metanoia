@@ -186,7 +186,7 @@ import { X } from "lucide-vue-next";
         </div>
 
         <div>
-          <p><b>F&B và nạp năng lượng</b>: Sự kiện sẽ có đầy đủ các gian hàng ăn uống F&B, mở xuyên suốt để mọi người có thể dừng chân nghỉ ngơi, tiếp tục lấy lại nhịp độ cho những phần kết nối..</p>
+          <p class="text-base sm:text-lg"><b>F&B và nạp năng lượng</b>: Sự kiện sẽ có đầy đủ các gian hàng ăn uống F&B, mở xuyên suốt để mọi người có thể dừng chân nghỉ ngơi, tiếp tục lấy lại nhịp độ cho những phần kết nối..</p>
         </div>
       </div>
     </div>
