@@ -262,7 +262,7 @@ import { X } from "lucide-vue-next";
               </div>
               <p class="mt-3 sm:mt-0 leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
                 Giới hạn 20 người.<br>
-                Trải nghiệm tiệc tối thân mật trước ngày sự kiện.
+                Thêm trải nghiệm tiệc tối thân mật trước ngày sự kiện.
               </p>
             </div>
           </div>
@@ -275,9 +275,10 @@ import { X } from "lucide-vue-next";
         </div>
       </div>
 
-      <div class="mt-10 sm:mt-20 italic max-w-lg space-y-0.5 text-sm sm:text-base">
+      <div class="mt-10 sm:mt-20 italic max-w-lg space-y-2 text-sm sm:text-base">
         <p>* Early bird kéo dài từ 10/09 đến 05/10.</p>
-        <p>† Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social (Facebook / Instagram) để được hỗ trợ.</p>
+        <p>† Vé Jung đã bao gồm vé Plato, thêm tiệc tối đêm trước sự kiện.</p>
+        <p>‡ Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social để được hỗ trợ.</p>
       </div>
 
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
@@ -309,7 +310,7 @@ import { X } from "lucide-vue-next";
           </a>
         </div>
 
-        <p class="mt-8 max-w-2xl italic text-sm sm:text-base"><b>* Lưu ý:</b> Chỉ dùng link Google Form được gửi từ các nguồn chính thức của The Tri Way. BTC sẽ không hỗ trợ refund sau khi bạn đã mua vé, bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
+        <p class="mt-8 max-w-2xl italic text-sm sm:text-base"><b>Lưu ý:</b> Chỉ dùng link Google Form được gửi từ các nguồn chính thức của The Tri Way. BTC sẽ không hỗ trợ refund sau khi bạn đã mua vé, bạn cần kiểm tra kĩ ngày giờ và nội dung sự kiện để chác chắn rằng chương trình phù hợp với mình.</p>
       </div>
 
       <div class="absolute left-0 bottom-0 bg-[url('/images/Crowded.png')] bg-no-repeat sm:bg-repeat bg-top w-full h-[30vh] bg-cover 2xl:bg-contain"></div>
