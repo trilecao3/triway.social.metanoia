@@ -37,7 +37,7 @@
         @vite(['resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
         @inertiaHead
 
-        <script src="https://widget.thrii.test/embed.js"></script>
+        <script src="https://widget.thrii.ai/embed.js"></script>
     </head>
     <body class="font-sans antialiased text-black">
         @inertia

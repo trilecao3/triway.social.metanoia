@@ -192,22 +192,22 @@ import { X } from "lucide-vue-next";
     </div>
   </div>
   <div class="pt-14 sm:pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
-    <div class="-mb-32 relative z-10 max-w-[320px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
-      <div class="w-full flex flex-col gap-y-5 sm:flex-row items-center justify-between">
+    <div class="-mb-32 relative z-10 max-w-[320px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-7 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
+      <div class="w-full flex flex-col gap-y-8 sm:gap-y-5 sm:flex-row items-center justify-between">
         <div class="text-6xl font-bold leading-14 tracking-tight">
           <img src="/images/Location_Tittle.png" alt="Agenda Icon" class="h-20 sm:h-28" />
         </div>
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-semibold sm:leading-12 tracking-tight text-center sm:text-right">
+        <div class="text-2xl sm:text-4xl lg:text-5xl font-semibold sm:leading-12 tracking-tight text-center sm:text-right">
           <p>SOHO Ballroom</p>
-          <p>The Global City.</p>
+          <p><b class="tracking-tighter sm:tracking-tight">The Global City</b></p>
         </div>
       </div>
 
-      <div class="mt-8 sm:mt-12 w-full text-center">
+      <div class="mt-3 sm:mt-12 w-full text-center">
         <p class="sm:text-xl xl:text-2xl font-medium">tại <b>đường Đỗ Xuân Hợp, phường An Phú, thành phố Thủ Đức.</b></p>
-        <div class="mt-11">
+        <div class="mt-7 sm:mt-11">
           <p>Pin tới vị trí của</p>
-          <p class="mt-2 flex items-center gap-x-4 justify-center">
+          <p class="mt-2 flex items-center gap-x-3 sm:gap-x-4 justify-center">
             <a href="https://www.google.com/maps?q=10.799449920654297,106.77384185791016&z=17&hl=vi" target="_blank" class="font-semibold">📍 SOHO Ballroom</a>
             <a href="https://www.google.com/maps?q=10.799236297607422,106.77223205566406&z=17&hl=vi" target="_blank" class="font-semibold">📍 Bãi đậu xe</a>
           </p>

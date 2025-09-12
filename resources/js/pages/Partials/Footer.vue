@@ -11,7 +11,7 @@ import Carousel from './Carousel.vue';
 
       <div class="w-[320px] sm:w-[450px] mx-auto flex justify-center mt-8">
         <thrii-widget 
-          api-key="thrii_otY28eYOrqhBtVJ5snM5xYI4" 
+          api-key="thrii_bm3IIDzT9b8EDDWSHbltCKaT" 
           widget-type="inline"
           class="w-full"
         ></thrii-widget>
