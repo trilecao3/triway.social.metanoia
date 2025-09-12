@@ -8,7 +8,45 @@ import Footer from "./Partials/Footer.vue";
 
 const logoState = ref("hidden");
 
+// Preload State
+const isLoaded = ref(false);
+const progress = ref(0);
+
 onMounted(() => {
+  const hasVisited = localStorage.getItem("hasVisited");
+
+  if (hasVisited) {
+    // Skip preloader
+    isLoaded.value = true;
+    return;
+  }
+
+  // ---- Loader Progress Simulation ----
+  let start = Date.now();
+  let duration = 3000; // 3 seconds
+  let timer = setInterval(() => {
+    let elapsed = Date.now() - start;
+    let ratio = Math.min(elapsed / duration, 1);
+
+    // Non-linear progression (ease-in-out + randomness)
+    let eased = Math.pow(ratio, 0.7) * 100; 
+    progress.value = Math.min(
+      100,
+      Math.floor(eased + Math.random() * 5) // add jitter
+    );
+
+    if (ratio >= 1) {
+      clearInterval(timer);
+      progress.value = 100;
+      setTimeout(() => {
+        isLoaded.value = true;
+        localStorage.setItem("hasVisited", "true"); // save flag
+      }, 300); // small delay to let "100%" show
+    }
+  }, 50);
+
+  // ---- Intersection Observer for logo ----
+
   const options = {
     threshold: 0.2,
   };
@@ -36,9 +74,6 @@ onMounted(() => {
 
   onBeforeUnmount(() => observer.disconnect());
 });
-
-// Preload Site
-const isLoaded = ref(true);
 </script>
 <template>
   <!-- Loader Screen -->

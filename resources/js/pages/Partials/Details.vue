@@ -262,7 +262,7 @@ import { X } from "lucide-vue-next";
               </div>
               <p class="mt-3 sm:mt-0 leading-snug font-medium text-sm sm:text-lg [text-shadow:_0_0_6px_#FEFBF6,_0_0_12px_#FEFBF6,_0_0_18px_#FEFBF6,_0_0_24px_#FEFBF6,_0_0_36px_#FEFBF6]">
                 Giới hạn 20 người.<br>
-                Thêm trải nghiệm tiệc tối thân mật trước ngày sự kiện.
+                Trải nghiệm tiệc tối thân mật trước ngày sự kiện.
               </p>
             </div>
           </div>
