@@ -20,11 +20,11 @@
         <meta property="og:image:height" content="1260" />
         <meta property="og:url" content="https://triway.social/metanoia" />
         <link rel="canonical" href="https://triway.social/metanoia" />
-        <meta property="og:title" content="Tham gia Metanoia Chương III – 26.10.2025 - The Tri Way x Triway Social" />
-        <meta name="twitter:title" content="Tham gia Metanoia Chương III – 26.10.2025 - The Tri Way x Triway Social">
-        <meta name="description" content="Tham gia Metanoia Chương III – 26.10.2025 - The Tri Way x Triway Social" />
-        <meta property="og:description" content="Tham gia Metanoia Chương III – 26.10.2025 - The Tri Way x Triway Social" />
-        <meta name="twitter:description" content="Tham gia Metanoia Chương III – 26.10.2025 - The Tri Way x Triway Social">
+        <meta property="og:title" content="Sự Kiện Metanoia III – The Tri Way x Triway Social" />
+        <meta name="twitter:title" content="Sự Kiện Metanoia III – The Tri Way x Triway Social">
+        <meta name="description" content="Tham gia sự kiện Metanoia III của The Tri Way ngày 26.10.2025. Nơi ý tưởng chuyển mình, con người gặp gỡ và sự đổi thay bắt đầu. Website: triway.social/metanoia" />
+        <meta property="og:description" content="Tham gia sự kiện Metanoia III của The Tri Way ngày 26.10.2025. Nơi ý tưởng chuyển mình, con người gặp gỡ và sự đổi thay bắt đầu. Website: triway.social/metanoia" />
+        <meta name="twitter:description" content="Tham gia sự kiện Metanoia III của The Tri Way ngày 26.10.2025. Nơi ý tưởng chuyển mình, con người gặp gỡ và sự đổi thay bắt đầu. Website: triway.social/metanoia">
         <meta property="og:image" content="https://triway.social/metanoia/images/KV_Metanoia_III_OG_link_preview_image.jpg" />
         <meta name="twitter:image" content="https://triway.social/metanoia/images/KV_Metanoia_III_OG_link_preview_image.jpg">
           
