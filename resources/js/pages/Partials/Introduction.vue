@@ -122,12 +122,13 @@ onMounted(() => {
     <!-- Overlays (each takes 100vh inside the 500vh scroll area) -->
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-2 sm:gap-y-9">
-          <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/60 -ml-2 sm:-ml-5 -rotate-[6deg]">Message</span>
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-0 sm:gap-y-5">
+          <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/90 -ml-2 sm:-ml-5 -rotate-[4deg]">Founder Message</span>
           Lời đầu từ The Tri Way
         </h2>
         <div class="max-w-[290px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p>Chào mừng bạn đến với mùa 3 của sự kiện lớn thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> /<span>μετάνοῦς</span>/ <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
+          <img src="/images/tri-portrait.jpg" class="rounded-full w-20 sm:w-28">
+          <p>Chào mừng bạn đến với mùa 3 sự kiện thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> / <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
           <p>Metanoia phát triển lớn dần qua mỗi năm, và là cột mốc tinh thần cho nhiều người tham dự: đó là những sự phát triển bản thân sau 1 năm nhìn lại, hoặc một chuỗi những người bạn đồng điệu được kết nối ngay tại event.</p>
           <p>Chương III chứng kiến sự đầu tư lớn nhất trước giờ của Trí, và đón chào sự tham gia của Triway Social Team. Tất cả cùng hướng đến việc tạo ra trải nghiệm tốt nhất cho người tham dự.</p>
         </div>

@@ -12,7 +12,7 @@ import {
   DialogClose
 } from "@/components/ui/dialog";
 import Jung from './Dialogs/Jung.vue';
-
+import { X } from "lucide-vue-next";
 </script>
 <template>
   <div class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
@@ -59,7 +59,7 @@ import Jung from './Dialogs/Jung.vue';
           </div>
           <div class="w-3/4 flex flex-col sm:flex-row">
             <div class="w-full sm:w-1/2">
-              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">09:00 &mdash; 10:30</p>
+              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">09:30 &mdash; 11:00</p>
             </div>
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần I: Góc Nhìn</p>
@@ -71,12 +71,19 @@ import Jung from './Dialogs/Jung.vue';
                     Đọc thêm
                   </Button>
                 </DialogTrigger>
-                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
-                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
-                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                <DialogContent class="rounded-xl border-black sm:max-w-xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:px-7 sm:py-5 bg-[#15181B] rounded-t-xl text-white flex flex-row items-center justify-between">
+                    <DialogTitle class="text-lg sm:text-xl font-bold tracking-tight">Phần I: Chia sẻ góc nhìn và Q&A</DialogTitle>
+                    <DialogClose as-child>
+                      <X class="w-6 h-6 text-white hover:cursor-pointer" />
+                    </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
-                    <p></p>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 leading-snug">
+                    <p>Tại Metanoia Chương III, Tri Lecao (The Tri Way) sẽ mang đến bài thuyết trình trọng điểm trong năm, chia sẻ một chủ đề tâm huyết cùng cộng đồng thính giả podcast có mặt tại sự kiện. Ngay sau đó, khán giả sẽ có cơ hội tham gia phần Q&amp;A trực tiếp để đối thoại và đặt câu hỏi.</p>
+                    <p>Bên cạnh đó, chương trình còn có sự góp mặt của các diễn giả khách mời, mang đến nhiều góc nhìn đa dạng và sâu sắc. Danh sách khách mời sẽ được cập nhật thêm tại page <strong>@triway.social</strong>.</p>
+                    <div>
+                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    </div>
                   </div>
                   <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
                     <DialogClose as-child>
@@ -96,7 +103,7 @@ import Jung from './Dialogs/Jung.vue';
           </div>
           <div class="w-3/4 flex flex-col sm:flex-row">
             <div class="w-full sm:w-1/2">
-              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">10:30 &mdash; 11:30</p>
+              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">11:30 &mdash; 12:00</p>
             </div>
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần II: Trình Diễn</p>
@@ -108,12 +115,19 @@ import Jung from './Dialogs/Jung.vue';
                     Đọc thêm
                   </Button>
                 </DialogTrigger>
-                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
-                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
-                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                <DialogContent class="rounded-xl border-black sm:max-w-xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:px-7 sm:py-5 bg-[#15181B] rounded-t-xl text-white flex flex-row items-center justify-between">
+                    <DialogTitle class="text-lg sm:text-xl font-bold tracking-tight">Phần II: Trình diễn từ các nghệ sĩ</DialogTitle>
+                    <DialogClose as-child>
+                      <X class="w-6 h-6 text-white hover:cursor-pointer" />
+                    </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
-                    <p></p>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5">
+                    <p>Hằng năm, Metanoia đem đến chương trình những nghệ sĩ khách mời – cũng là những người bạn trong cộng đồng The Tri Way để tạo ra những nhịp điệu tươi mới.</p>
+                    <p>Chủ đề cho các tiết mục năm nay là những tác phẩm mà các nghệ sĩ thấy diễn tả mình <b>chân thực nhất</b>, thay vì là những bài nổi tiếng nhất. Họ cũng sẽ chia sẻ đôi chút về lựa chọn này của mình.</p>
+                    <div>
+                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    </div>
                   </div>
                   <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
                     <DialogClose as-child>
@@ -133,7 +147,7 @@ import Jung from './Dialogs/Jung.vue';
           </div>
           <div class="w-3/4 flex flex-col sm:flex-row">
             <div class="w-full sm:w-1/2">
-              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">11:30 &mdash; 14:30</p>
+              <p class="font-semibold text-2xl sm:text-3xl xl:text-4xl tracking-tight text-right sm:text-left">12:00 &mdash; 14:30</p>
             </div>
             <div class="w-full sm:w-1/2 text-right text-xl font-medium w-1/2">
               <p class="font-semibold">Phần III: Kết Nối</p>
@@ -144,12 +158,19 @@ import Jung from './Dialogs/Jung.vue';
                     Đọc thêm
                   </Button>
                 </DialogTrigger>
-                <DialogContent class="rounded-xl border-black sm:max-w-3xl p-0 bg-[#15181B] gap-0">
-                  <DialogHeader class="p-4 sm:p-6 bg-[#15181B] rounded-t-xl text-white">
-                    <DialogTitle>Vé Jung @ Metanoia 3</DialogTitle>
+                <DialogContent class="rounded-xl border-black sm:max-w-xl p-0 bg-[#15181B] gap-0">
+                  <DialogHeader class="p-4 sm:px-7 sm:py-5 bg-[#15181B] rounded-t-xl text-white flex flex-row items-center justify-between">
+                    <DialogTitle class="text-lg sm:text-xl font-bold tracking-tight">Phần II: Trình diễn từ các nghệ sĩ</DialogTitle>
+                    <DialogClose as-child>
+                      <X class="w-6 h-6 text-white hover:cursor-pointer" />
+                    </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black">
-                    <p></p>
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5">
+                    <p>Metanoia Chương III sẽ dành thời lượng lớn nhất để mọi người có dịp kết nối, tìm thêm những người bạn mới.</p>
+                    <p>Sẽ có 6 trạm trải nghiệm tất cả: Chân – Thiện – Mỹ – Động – Tĩnh – Soul, hứa hẹn sẽ tạo một không gian gắn kết đầy sáng tạo, với nhiều hoạt động khác nhau để mọi người có thể "đến một mình, về một nhóm".</p>
+                    <div>
+                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    </div>
                   </div>
                   <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
                     <DialogClose as-child>
@@ -163,10 +184,14 @@ import Jung from './Dialogs/Jung.vue';
             </div>
           </div>
         </div>
+
+        <div>
+          <p><b>F&B và nạp năng lượng</b>: Sự kiện sẽ có đầy đủ các gian hàng ăn uống F&B, mở xuyên suốt để mọi người có thể dừng chân nghỉ ngơi, tiếp tục lấy lại nhịp độ cho những phần kết nối..</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
+  <div class="pt-14 sm:pt-20 relative w-full items-center justify-center bg-[#FEFBF6]">
     <div class="-mb-32 relative z-10 max-w-[320px] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto p-9 sm:p-10 lg:p-14 bg-white/70 backdrop-blur-sm shadow-lg shadow-black/5 rounded-3xl">
       <div class="w-full flex flex-col gap-y-5 sm:flex-row items-center justify-between">
         <div class="text-6xl font-bold leading-14 tracking-tight">
@@ -180,6 +205,13 @@ import Jung from './Dialogs/Jung.vue';
 
       <div class="mt-8 sm:mt-12 w-full text-center">
         <p class="sm:text-xl xl:text-2xl font-medium">tại <b>đường Đỗ Xuân Hợp, phường An Phú, thành phố Thủ Đức.</b></p>
+        <div class="mt-11">
+          <p>Pin tới vị trí của</p>
+          <p class="mt-2 flex items-center gap-x-4 justify-center">
+            <a href="https://www.google.com/maps?q=10.799449920654297,106.77384185791016&z=17&hl=vi" target="_blank" class="font-semibold">📍 SOHO Ballroom</a>
+            <a href="https://www.google.com/maps?q=10.799236297607422,106.77223205566406&z=17&hl=vi" target="_blank" class="font-semibold">📍 Bãi đậu xe</a>
+          </p>
+        </div>
       </div>
     </div>
     <img src="/images/soho-ballroom.png" alt="Soho Ballroom" class="w-full h-[70vh] object-top object-cover" />
@@ -245,7 +277,7 @@ import Jung from './Dialogs/Jung.vue';
 
       <div class="mt-10 sm:mt-20 italic max-w-lg space-y-0.5 text-sm sm:text-base">
         <p>* Early bird kéo dài từ 10/09 đến 05/10.</p>
-        <p>† Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social để được hỗ trợ.</p>
+        <p>† Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social (Facebook / Instagram) để được hỗ trợ.</p>
       </div>
 
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
