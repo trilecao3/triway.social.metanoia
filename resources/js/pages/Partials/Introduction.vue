@@ -122,11 +122,11 @@ onMounted(() => {
     <!-- Overlays (each takes 100vh inside the 500vh scroll area) -->
     <div class="absolute top-0 w-full h-screen flex items-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-0 sm:gap-y-5">
-          <span class="text-4xl sm:text-5xl font-display !font-light text-red-600/90 -ml-2 sm:-ml-5 -rotate-[4deg]">From founder</span>
+        <h2 class="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight mb-7 flex flex-col gap-y-0 sm:gap-y-5">
+          <span class="text-4xl sm:text-4xl xl:text-5xl font-display !font-light text-red-600/90 -ml-2 sm:-ml-5 -rotate-[4deg]">From founder</span>
           Lời đầu từ The Tri Way
         </h2>
-        <div class="max-w-[290px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
+        <div class="max-w-[290px] sm:max-w-md text-base sm:text-base xl:text-lg font-medium leading-snug space-y-5">
           <img src="/images/tri-portrait.jpg" class="rounded-full w-20 sm:w-28">
           <p>Chào mừng bạn đến với mùa 3 sự kiện thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> / <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
           <p>Metanoia phát triển lớn dần qua mỗi năm, và là cột mốc tinh thần cho nhiều người tham dự: đó là những sự phát triển bản thân sau 1 năm nhìn lại, hoặc một chuỗi những người bạn đồng điệu được kết nối ngay tại event.</p>
@@ -136,39 +136,39 @@ onMounted(() => {
 
     <div class="absolute top-[80vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
-          <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Authenticity</span>
+        <h2 class="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
+          <span class="text-4xl sm:text-4xl xl:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Authenticity</span>
           Sự Chân Thực
         </h2>
-        <div class="max-w-[280px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-5">
-          <p class="text-xl sm:text-2xl font-semibold leading-snug">Là thông điệp chính cho 3 phần trong sự kiện:</p>
+        <div class="max-w-[280px] sm:max-w-md text-base sm:text-base xl:text-lg font-medium leading-snug space-y-5">
+          <p class="text-xl xl:text-2xl font-semibold leading-snug">Là thông điệp chính cho 3 phần trong sự kiện:</p>
           <div class="ml-4">
-            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">1. Chia sẻ góc nhìn.</p>
-            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">2. Tiết mục trình diễn.</p>
-            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">3. Giao lưu kết nối.</p>
+            <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">1. Chia sẻ góc nhìn.</p>
+            <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">2. Tiết mục trình diễn.</p>
+            <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">3. Giao lưu kết nối.</p>
           </div>
           <p>Các hoạt động chủ chốt của Metanoia Chương III sẽ xoay quanh tinh thần Authenticity / Chân Thực này.</p>
         </div>
       </div>
     </div>
 
-    <div class="absolute top-[140vh] w-full h-screen flex items-center justify-center z-10">
+    <div class="absolute top-[140vh] sm:top-[150vh] w-full h-screen flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
-        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
-          <span class="text-4xl sm:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Why join?</span>
+        <h2 class="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight mb-9 flex flex-col gap-y-2 sm:gap-y-9">
+          <span class="text-4xl sm:text-4xl xl:text-5xl font-display !font-light -ml-2 sm:-ml-5 -rotate-[6deg]">Why join?</span>
           Tại Sao Bạn Nên Đến?
         </h2>
-        <div class="max-w-[300px] sm:max-w-md text-base sm:text-lg font-medium leading-snug space-y-2">
-          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">Gặp những người bạn mới.</p>
-          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">Thêm những góc nhìn mới.</p>
-          <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">Thiết lập một chương mới.</p>
-          <p class="!mt-8">Chương III chứng kiến sự đầu tư lớn nhất trước giờ của Trí, và đón chào sự tham gia của Triway Social Team. Tất cả cùng hướng đến việc tạo ra trải nghiệm tốt nhất cho người tham dự.</p>
+        <div class="max-w-[300px] sm:max-w-md text-base sm:text-base xl:text-lg font-medium leading-snug space-y-2">
+          <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">Gặp những người bạn mới.</p>
+          <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">Thêm những góc nhìn mới.</p>
+          <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">Thiết lập một chương mới.</p>
+          <p class="!mt-8">Chương III chứng kiến sự đầu tư lớn nhất trước giờ của Trí, và đón chào sự tham gia của Triway Social Team. Tất cả cùng hướng đến việc tạo ra trải nghiệm tốt nhất.</p>
           <p class="!mt-5">Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến, cùng hoà vào nhịp đập chung của Metanoia Chương III.</p>
         </div>
       </div>
     </div>
 
-    <div class="absolute top-[220vh] w-full h-[30vh] flex items-center justify-center z-10">
+    <div class="absolute top-[220vh] sm:top-[230vh] xl:top-[227vh] w-full h-[30vh] flex items-center justify-center z-10">
       <div class="px-5 sm:px-8 lg:px-0 mx-auto w-full md:max-w-3xl 2xl:max-w-4xl text-white">
         <a href="#details" class="inline-block px-8 py-4 rounded-full text-lg font-bold transition-all ring-2 ring-white/60 hover:ring-white">
           Chi tiết và vé sự kiện

@@ -160,7 +160,7 @@ import { X } from "lucide-vue-next";
                 </DialogTrigger>
                 <DialogContent class="rounded-xl border-black sm:max-w-xl p-0 bg-[#15181B] gap-0">
                   <DialogHeader class="p-4 sm:px-7 sm:py-5 bg-[#15181B] rounded-t-xl text-white flex flex-row items-center justify-between">
-                    <DialogTitle class="text-lg sm:text-xl font-bold tracking-tight">Phần II: Trình diễn từ các nghệ sĩ</DialogTitle>
+                    <DialogTitle class="text-lg sm:text-xl font-bold tracking-tight">Phần III: Giao lưu & kết nối</DialogTitle>
                     <DialogClose as-child>
                       <X class="w-6 h-6 text-white hover:cursor-pointer" />
                     </DialogClose>
@@ -199,7 +199,7 @@ import { X } from "lucide-vue-next";
         </div>
         <div class="text-2xl sm:text-4xl lg:text-5xl font-semibold sm:leading-12 tracking-tight text-center sm:text-right">
           <p>SOHO Ballroom</p>
-          <p><b class="tracking-tighter sm:tracking-tight">The Global City</b></p>
+          <p><span class="font-medium tracking-tighter sm:tracking-tight">The Global City</span></p>
         </div>
       </div>
 
