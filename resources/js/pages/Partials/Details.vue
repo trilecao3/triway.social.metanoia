@@ -283,7 +283,7 @@ const trackTicket = (source) => {
       </div>
 
       <div class="mt-10 sm:mt-20 italic max-w-lg space-y-2 text-sm sm:text-base">
-        <p>* Early bird kéo dài từ 10/09 đến 05/10.</p>
+        <p>* Early bird kéo dài từ 12/09 đến 12/10.</p>
         <p>† Vé Jung đã bao gồm vé Plato, thêm tiệc tối đêm trước sự kiện.</p>
         <p>‡ Sinh viên được giảm 20% cho Plato, giới hạn 100 vé và cần thẻ sinh viên. Liên hệ @triway.social để được hỗ trợ.</p>
       </div>
