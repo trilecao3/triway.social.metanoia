@@ -13,6 +13,13 @@ import {
 } from "@/components/ui/dialog";
 import Jung from './Dialogs/Jung.vue';
 import { X } from "lucide-vue-next";
+import { onMounted } from 'vue';
+
+const trackTicket = (source) => {
+  gtag("event", "Visit_Ticket_Link", {
+    source: source
+  });
+};
 </script>
 <template>
   <div class="relative w-full flex h-auto w-full items-center justify-center bg-[#FEFBF6] px-5 sm:px-8 lg:px-0">
@@ -284,25 +291,29 @@ import { X } from "lucide-vue-next";
       <div class="mt-14 sm:mt-20 pb-56 sm:pb-76 xl:pb-80 2xl:pb-92">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Các cách mua vé</h2>
         <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScfJLhBER-M78BxgKN7l8SKxAQE1DlrFnYXUcNPDpdZKSMzAw/viewform?usp=dialog" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScfJLhBER-M78BxgKN7l8SKxAQE1DlrFnYXUcNPDpdZKSMzAw/viewform?usp=dialog" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between"
+          @click="trackTicket('Google_Form')">
             <div>
               <p class="text-base xl:text-lg font-semibold">Qua <span class="text-green-700">Google Form</span></p>
               <p class="text-sm sm:text-base mt-0.5 leading-snug">Cho chuyển khoản.</p>
             </div>
           </a>
-          <a href="https://vibeji.com/thetriway/event/1002101" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://vibeji.com/thetriway/event/1002101" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between"
+          @click="trackTicket('Vibeji')">
             <div>
               <p class="text-base xl:text-lg font-semibold">Qua <span class="text-orange-600">Vibeji</span></p>
               <p class="text-sm sm:text-base mt-0.5 leading-snug">Cho thanh toán thẻ.</p>
             </div>
           </a>
-          <a href="https://instagram.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://instagram.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between"
+          @click="trackTicket('Instagram')">
             <div>
               <p class="text-base xl:text-lg font-semibold">Qua <span class="text-pink-600">Instagram</span></p>
               <p class="text-sm sm:text-base mt-0.5 leading-snug">@triway.social hỗ trợ.</p>
             </div>
           </a>
-          <a href="https://facebook.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between">
+          <a href="https://facebook.com/triway.social" target="_blank" class="block px-4 py-3 sm:px-5 sm:py-4 rounded-xl ring-1 ring-gray-900 bg-white shadow-md hover:-translate-y-0.5 transition-transform flex items-center gap-x-6 justify-between"
+          @click="trackTicket('Facebook')">
             <div>
               <p class="text-base xl:text-lg font-semibold">Qua <span class="text-blue-600">Facebook</span></p>
               <p class="text-sm sm:text-base mt-0.5 leading-snug">@triway.social hỗ trợ.</p>

@@ -162,7 +162,6 @@ onMounted(() => {
           <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-gray-50 to-gray-300/30 bg-clip-text text-transparent">Gặp những người bạn mới.</p>
           <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-l from-gray-100 to-gray-300/50 bg-clip-text text-transparent">Thêm những góc nhìn mới.</p>
           <p class="text-xl xl:text-2xl font-semibold bg-gradient-to-b from-gray-50 to-gray-300/50 bg-clip-text text-transparent">Thiết lập một chương mới.</p>
-          <p class="!mt-8">Chương III chứng kiến sự đầu tư lớn nhất trước giờ của Trí, và đón chào sự tham gia của Triway Social Team. Tất cả cùng hướng đến việc tạo ra trải nghiệm tốt nhất.</p>
           <p class="!mt-5">Hy vọng đây sẽ trở thành khoảnh khắc đáng nhớ nhất năm 2025 cho riêng bạn. Hãy đến, cùng hoà vào nhịp đập chung của Metanoia Chương III.</p>
         </div>
       </div>
