@@ -128,7 +128,7 @@ onMounted(() => {
         </h2>
         <div class="max-w-[290px] sm:max-w-md text-base sm:text-base xl:text-lg font-medium leading-snug space-y-5">
           <img src="/images/tri-portrait.jpg" class="rounded-full w-20 sm:w-28">
-          <p>Chào mừng bạn đến với mùa 3 sự kiện thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> / <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tựu vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
+          <p>Chào mừng bạn đến với mùa 3 sự kiện thuờng niên của The Tri Way, với tên gọi <b>Metanoia</b> / <em>Thay Đổi Lớn</em>. Đây là dịp mỗi năm mà Trí đón hàng trăm bạn thính giả – từ nhiều nơi ở Việt Nam và thế giới – cùng hội tụ vể Sài Gòn để trải nghiệm không khí cộng đồng mà Việt Nam hiếm khi được thấy.</p>
           <p>Metanoia phát triển lớn dần qua mỗi năm, và là cột mốc tinh thần cho nhiều người tham dự: đó là những sự phát triển bản thân sau 1 năm nhìn lại, hoặc một chuỗi những người bạn đồng điệu được kết nối ngay tại event.</p>
         </div>
       </div>
