@@ -76,6 +76,10 @@ onMounted(() => {
 });
 </script>
 <template>
+  <thrii-widget 
+    api-key="thrii_bm3IIDzT9b8EDDWSHbltCKaT" 
+    widget-type="bubble"
+  ></thrii-widget>
   <!-- Loader Screen -->
   <transition name="fade">
     <div
