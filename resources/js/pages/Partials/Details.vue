@@ -85,20 +85,17 @@ const trackTicket = (source) => {
                       <X class="w-6 h-6 text-white hover:cursor-pointer" />
                     </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 leading-snug">
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 leading-snug text-sm sm:text-base">
                     <p>Tại Metanoia Chương III, Tri Lecao (The Tri Way) sẽ mang đến bài thuyết trình trọng điểm trong năm, chia sẻ một chủ đề tâm huyết cùng cộng đồng thính giả podcast có mặt tại sự kiện. Ngay sau đó, khán giả sẽ có cơ hội tham gia phần Q&amp;A trực tiếp để đối thoại và đặt câu hỏi.</p>
-                    <p>Bên cạnh đó, chương trình còn có sự góp mặt của các diễn giả khách mời, mang đến nhiều góc nhìn đa dạng và sâu sắc. Danh sách khách mời sẽ được cập nhật thêm tại page <strong>@triway.social</strong>.</p>
-                    <div>
-                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    <p>Bên cạnh đó, chương trình còn có sự góp mặt của các diễn giả khách mời, mang đến nhiều góc nhìn đa dạng và sâu sắc.</p>
+                    <div class="flex items-center flex-no-wrap overflow-x-auto">
+                      <img src="/images/speakers/ba-xuan-phuong.png" alt="Bà Xuân Phượng - Diễn giả khách mời" class="h-44 sm:h-60 w-auto" />
+                      <img src="/images/speakers/tri-lecao.png" alt="Lê Cao Trí - Diễn giả khách mời" class="h-44 sm:h-60 w-auto" />
+                    </div>
+                    <div class="bg-white rounded-lg p-3 sm:p-4 ring-1 ring-gray-200 shadow-sm font-semibold">
+                      <p class="text-sm">Theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận cập nhật về diễn giả.</p>
                     </div>
                   </div>
-                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
-                    <DialogClose as-child>
-                      <Button type="button" variant="secondary">
-                        Đóng
-                      </Button>
-                    </DialogClose>
-                  </DialogFooter>
                 </DialogContent>
               </Dialog>
             </div>
@@ -129,20 +126,13 @@ const trackTicket = (source) => {
                       <X class="w-6 h-6 text-white hover:cursor-pointer" />
                     </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5">
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 text-sm sm:text-base">
                     <p>Hằng năm, Metanoia đem đến chương trình những nghệ sĩ khách mời – cũng là những người bạn trong cộng đồng The Tri Way để tạo ra những nhịp điệu tươi mới.</p>
                     <p>Chủ đề cho các tiết mục năm nay là những tác phẩm mà các nghệ sĩ thấy diễn tả mình <b>chân thực nhất</b>, thay vì là những bài nổi tiếng nhất. Họ cũng sẽ chia sẻ đôi chút về lựa chọn này của mình.</p>
-                    <div>
-                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    <div class="bg-white rounded-lg p-3 sm:p-4 ring-1 ring-gray-200 shadow-sm font-semibold">
+                      <p class="text-sm">Theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận cập nhật về các nghệ sĩ.</p>
                     </div>
                   </div>
-                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
-                    <DialogClose as-child>
-                      <Button type="button" variant="secondary">
-                        Đóng
-                      </Button>
-                    </DialogClose>
-                  </DialogFooter>
                 </DialogContent>
               </Dialog>
             </div>
@@ -172,20 +162,13 @@ const trackTicket = (source) => {
                       <X class="w-6 h-6 text-white hover:cursor-pointer" />
                     </DialogClose>
                   </DialogHeader>
-                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5">
+                  <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 text-sm sm:text-base">
                     <p>Metanoia Chương III sẽ dành thời lượng lớn nhất để mọi người có dịp kết nối, tìm thêm những người bạn mới.</p>
                     <p>Sẽ có 6 trạm trải nghiệm tất cả: Chân – Thiện – Mỹ – Động – Tĩnh – Soul, hứa hẹn sẽ tạo một không gian gắn kết đầy sáng tạo, với nhiều hoạt động khác nhau để mọi người có thể "đến một mình, về một nhóm".</p>
-                    <div>
-                      <p>Bạn có thể theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận update thường xuyên về sự kiện.</p>
+                    <div class="bg-white rounded-lg p-3 sm:p-4 ring-1 ring-gray-200 shadow-sm font-semibold">
+                      <p class="text-sm">Theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận cập nhật về các trạm.</p>
                     </div>
                   </div>
-                  <DialogFooter class="bg-[#FEFBF6] p-4 sm:p-6 rounded-b-xl">
-                    <DialogClose as-child>
-                      <Button type="button" variant="secondary">
-                        Đóng
-                      </Button>
-                    </DialogClose>
-                  </DialogFooter>
                 </DialogContent>
               </Dialog>
             </div>
