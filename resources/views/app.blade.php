@@ -37,7 +37,7 @@
         @vite(['resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
         @inertiaHead
 
-        <script src="https://widget.thrii.ai/embed.js?v=20250915"></script>
+        <script src="https://widget.thrii.ai/embed.js?v=20250925"></script>
 
         @if (env('APP_ENV') == 'production')
         <!-- Meta Pixel Code -->
