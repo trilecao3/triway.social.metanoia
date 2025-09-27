@@ -38,11 +38,11 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
   <div
     class="relative flex h-screen w-full bg-gradient-to-br from-zinc-900 to-black/85 text-white"
   >
-    <div class="absolute top-8 w-full flex flex-col justify-center items-center gap-y-0.5 sm:gap-y-1 text-sm sm:text-base">
+    <div class="absolute top-8 w-full flex flex-col justify-center items-center gap-y-0.5 xl:gap-y-1 text-sm xl:text-base">
       <p>Thiết kế và tổ chức bởi</p>
-      <p class="uppercase font-bold">The Tri Way x Triway Social</p>
+      <p class="uppercase font-bold tracking-tight">The Tri Way x Triway Social</p>
     </div>
-    <div class="-mt-[20px] sm:-mt-[50px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
+    <div class="-mt-[20px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
       <div class="w-full flex justify-center">
         <div class="-mt-8 sm:-mt-5">
           <div class="w-full flex items-center justify-center gap-x-5 sm:gap-x-7 opacity-70 sm:opacity-60">
@@ -65,18 +65,21 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
           </div>
         </div>
       </div>
-      <div class="w-full mt-20 sm:mt-32 space-y-6">
+      <div class="w-full mt-20 sm:mt-24 xl:mt-32 space-y-9">
         <div class="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
           <img src="/images/logo/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-24 xl:w-28" />
-          <img src="/images/logo/tgc-logo.png" alt="Triway Social Logo" class="h-8 sm:h-11 xl:h-13" />
-          <img src="/images/logo/mh-logo.png" alt="Triway Social Logo" class="h-10 sm:h-14 xl:h-16" />
-          <img src="/images/logo/fonos-logo.png" alt="Triway Social Logo" class="h-8 sm:h-10 xl:h-12" />
-          <img src="/images/logo/gaonau-logo.png" alt="Triway Social Logo" class="h-9 sm:h-12 xl:h-13" />
+          <img src="/images/logo/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-12 xl:h-14" />
+          <img src="/images/logo/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-[75px] xl:h-20" />
+          <img src="/images/logo/thrii-logo.png" alt="Thrii Logo" class="h-7 sm:h-9 xl:h-10" />
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
+          <img src="/images/logo/fonos-logo.png" alt="Fonos Logo" class="h-8 sm:h-9 xl:h-9" />
+          <img src="/images/logo/gaonau-logo.png" alt="Gao Nau Logo" class="h-9 sm:h-10 xl:h-10" />
         </div>
       </div>
     </div>
 
-    <Carousel class="absolute z-30 bottom-0 w-full overflow-hidden bg-transparent" :show="`row2`" />
+    <!-- <Carousel class="absolute z-30 bottom-0 w-full overflow-hidden bg-transparent" :show="`row2`" /> -->
   </div>
 </template>
 <style scoped>
