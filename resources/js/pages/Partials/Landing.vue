@@ -42,7 +42,7 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
       <p>Thiết kế và tổ chức bởi</p>
       <img src="/images/logo/on-light/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-16 xl:w-20" />
     </div>
-    <div class="-mt-[75px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
+    <div class="-mt-[90px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
       <div class="w-full flex justify-center">
         <div class="-mt-8 sm:-mt-5">
           <div class="w-full flex items-center justify-center gap-x-5 sm:gap-x-7">
@@ -67,8 +67,8 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
       </div>
     </div>
 
-    <div class="absolute z-30 bottom-12 xl:bottom-20 w-full">
-      <div class="hidden sm:block sm:space-y-7 xl:space-y-9 w-full">
+    <div class="absolute z-30 bottom-5 sm:bottom-10 xl:bottom-20 w-full">
+      <div class="hidden sm:block sm:space-y-5 w-full">
         <div class="flex flex-wrap items-center justify-center gap-x-12">
           <img src="/images/logo/on-light/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-13" />
           <img src="/images/logo/on-light/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-20" />
@@ -79,9 +79,13 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
           <img src="/images/logo/on-light/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-14 sm:h-5" />
           <img src="/images/logo/on-light/thrii-logo.png" alt="Thrii Logo" class="h-14 sm:h-7" />
         </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-12">
+          <img src="/images/logo/on-light/fonos-logo.png" alt="Viet Nam Tinh Hoa Primary School Logo" class="h-14 sm:h-7" />
+          <img src="/images/logo/on-light/gaonau-logo.png" alt="Soul Institute of Arts Logo" class="h-14 sm:h-10" />
+        </div>
       </div>
-      <div class="block sm:hidden w-full space-y-4">
-        <div class="flex flex-wrap items-center justify-center gap-x-6 mb-6">
+      <div class="block sm:hidden w-full space-y-3">
+        <div class="flex flex-wrap items-center justify-center gap-x-6 mb-5">
           <img src="/images/logo/on-light/tgc-logo.png" alt="The Global City Logo" class="h-11" />
           <img src="/images/logo/on-light/mh-logo.png" alt="Masterise Homes Logo" class="h-16" />
         </div>
@@ -90,8 +94,12 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
         </div>
         <div class="flex flex-wrap items-center justify-center gap-x-6">
           <img src="/images/logo/on-light/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-4" />
-          <img src="/images/logo/on-light/sia-logo.png" alt="Soul Institute of Arts" class="h-11" />
+          <img src="/images/logo/on-light/sia-logo.png" alt="Soul Institute of Arts" class="h-12" />
           <img src="/images/logo/on-light/thrii-logo.png" alt="Men Stay Simplicity Logo" class="h-5" />
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/on-light/fonos-logo.png" alt="Viet Nam Tinh Hoa Primary School Logo" class="h-5.5" />
+          <img src="/images/logo/on-light/gaonau-logo.png" alt="Soul Institute of Arts Logo" class="h-7" />
         </div>
       </div>
     </div>
