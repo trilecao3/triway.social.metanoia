@@ -36,62 +36,63 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
 </script>
 <template>
   <div
-    class="relative flex h-screen w-full bg-gradient-to-br from-zinc-900 to-black/85 text-white"
+    class="relative flex h-screen w-full bg-[#FEFBF6]"
   >
-    <div class="absolute top-8 w-full flex flex-col justify-center items-center gap-y-0.5 xl:gap-y-1 text-sm xl:text-base">
+    <div class="absolute top-8 w-full flex flex-col justify-center items-center gap-y-1 xl:gap-y-2 text-sm xl:text-base">
       <p>Thiết kế và tổ chức bởi</p>
-      <img src="/images/logo/on-dark/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-20 xl:w-24" />
+      <img src="/images/logo/on-light/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-16 xl:w-20" />
     </div>
     <div class="-mt-[75px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
       <div class="w-full flex justify-center">
         <div class="-mt-8 sm:-mt-5">
-          <div class="w-full flex items-center justify-center gap-x-5 sm:gap-x-7 opacity-70 sm:opacity-60">
-            <h1 class="text-[7rem] sm:text-[11rem] xl:text-[14rem] font-extrabold tracking-tight">
-              <span v-if="daysUntilTarget.length === 2">
+          <div class="w-full flex items-center justify-center gap-x-5 sm:gap-x-7">
+            <h1 class="text-[3.5rem] leading-15 text-center sm:text-[4rem] xl:text-[5rem] font-bold tracking-tighter">
+              Còn 
+              <span v-if="daysUntilTarget.length === 2"
+              class="text-blue-700">
                 {{ daysUntilTarget[0] }}
               </span>
-              <span class="bg-gradient-to-r from-gray-50 to-gray-400/30 bg-clip-text text-transparent">
+              <span class="text-blue-700">
                 {{ daysUntilTarget.length === 2 ? daysUntilTarget[1] : daysUntilTarget[0] }}
-              </span>
+              </span> 
+              <span class="text-blue-700"> ngày </span>
+              <span class="bg-gradient-to-r from-black to-black/20 bg-clip-text text-transparent">đến với</span>
             </h1>
-            <span class="text-[2.75rem] sm:text-[4.4rem] xl:text-[5.5rem] font-bold leading-13 sm:leading-20 xl:leading-26 tracking-tight -mt-1 sm:-mt-2 xl:-mt-3">
-              ngày<br>
-              <span class="bg-gradient-to-r from-gray-50 to-gray-300/40 bg-clip-text text-transparent">đến với</span>
-            </span>
           </div>
-          <div class="mx-auto sm:mx-0 mt-0 block w-full text-center">
-            <h1 class="text-3xl sm:text-4xl xl:text-5xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
-            <span class="block mt-0 font-display text-4xl sm:text-5xl xl:text-6xl text-center rotate-[-4deg] mx-auto text-red-500">authenticity</span>
+          <div class="mx-auto sm:mx-0 mt-7 xl:mt-12 block w-full text-center">
+            <h1 class="text-3xl sm:text-4xl tracking-tight"><span class="font-bold">Metanoia</span> Chương III</h1>
+            <span class="block mt-0 font-display text-4xl sm:text-5xl text-center rotate-[-4deg] mx-auto text-red-500">authenticity</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="absolute z-30 bottom-12 xl:bottom-20 w-full space-y-6 sm:space-y-6 xl:space-y-9">
-      <div class="hidden sm:flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
-        <img src="/images/logo/on-dark/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-11 xl:h-12" />
-        <img src="/images/logo/on-dark/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-16 xl:h-16" />
-        <img src="/images/logo/on-dark/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School Logo" class="h-14 sm:h-11 xl:h-12" />
-        <img src="/images/logo/on-dark/sia-logo.png" alt="Soul Institute of Arts Logo" class="h-14 sm:h-16 xl:h-16" />
-        <img src="/images/logo/on-dark/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-14 sm:h-5 xl:h-6" />
-      </div>
-      <div class="block sm:hidden space-y-6">
-        <div class="flex flex-wrap items-center justify-center gap-x-6">
-          <img src="/images/logo/on-dark/tgc-logo.png" alt="The Global City Logo" class="h-10" />
-          <img src="/images/logo/on-dark/mh-logo.png" alt="Masterise Homes Logo" class="h-14" />
+    <div class="absolute z-30 bottom-12 xl:bottom-20 w-full">
+      <div class="hidden sm:block sm:space-y-7 xl:space-y-9 w-full">
+        <div class="flex flex-wrap items-center justify-center gap-x-12">
+          <img src="/images/logo/on-light/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-13" />
+          <img src="/images/logo/on-light/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-20" />
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-x-6">
-          <img src="/images/logo/on-dark/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School" class="h-10" />
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-x-6">
-          <img src="/images/logo/on-dark/sia-logo.png" alt="Soul Institute of Arts" class="h-12" />
-          <img src="/images/logo/on-dark/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-4" />
+        <div class="flex flex-wrap items-center justify-center gap-x-12">
+          <img src="/images/logo/on-light/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School Logo" class="h-14 sm:h-9" />
+          <img src="/images/logo/on-light/sia-logo.png" alt="Soul Institute of Arts Logo" class="h-14 sm:h-14" />
+          <img src="/images/logo/on-light/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-14 sm:h-5" />
+          <img src="/images/logo/on-light/thrii-logo.png" alt="Thrii Logo" class="h-14 sm:h-7" />
         </div>
       </div>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
-        <img src="/images/logo/on-dark/thrii-logo.png" alt="Thrii Logo" class="h-5 sm:h-6 xl:h-7" />
-        <img src="/images/logo/on-dark/fonos-logo.png" alt="Fonos Logo" class="h-6 sm:h-7 xl:h-9" />
-        <img src="/images/logo/on-dark/gaonau-logo.png" alt="Gao Nau Logo" class="h-7 sm:h-9 xl:h-10" />
+      <div class="block sm:hidden w-full space-y-4">
+        <div class="flex flex-wrap items-center justify-center gap-x-6 mb-6">
+          <img src="/images/logo/on-light/tgc-logo.png" alt="The Global City Logo" class="h-11" />
+          <img src="/images/logo/on-light/mh-logo.png" alt="Masterise Homes Logo" class="h-16" />
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/on-light/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School" class="h-8" />
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/on-light/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-4" />
+          <img src="/images/logo/on-light/sia-logo.png" alt="Soul Institute of Arts" class="h-11" />
+          <img src="/images/logo/on-light/thrii-logo.png" alt="Men Stay Simplicity Logo" class="h-5" />
+        </div>
       </div>
     </div>
 
