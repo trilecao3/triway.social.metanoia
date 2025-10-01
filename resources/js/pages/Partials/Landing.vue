@@ -40,9 +40,9 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
   >
     <div class="absolute top-8 w-full flex flex-col justify-center items-center gap-y-0.5 xl:gap-y-1 text-sm xl:text-base">
       <p>Thiết kế và tổ chức bởi</p>
-      <p class="uppercase font-bold tracking-tight">The Tri Way x Triway Social</p>
+      <img src="/images/logo/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-20 xl:w-24" />
     </div>
-    <div class="-mt-[20px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
+    <div class="-mt-[75px] w-full sm:max-w-4xl xl:max-w-7xl z-10 px-4 mx-auto flex flex-col sm:gap-x-10 xl:gap-x-16 items-center justify-center">
       <div class="w-full flex justify-center">
         <div class="-mt-8 sm:-mt-5">
           <div class="w-full flex items-center justify-center gap-x-5 sm:gap-x-7 opacity-70 sm:opacity-60">
@@ -65,17 +65,33 @@ const opacities = ref(loopWords.map(() => randomOpacity()))
           </div>
         </div>
       </div>
-      <div class="w-full mt-20 sm:mt-24 xl:mt-32 space-y-9">
-        <div class="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
-          <img src="/images/logo/tws-logo.png" alt="Triway Social Logo" class="w-16 sm:w-24 xl:w-28" />
-          <img src="/images/logo/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-12 xl:h-14" />
-          <img src="/images/logo/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-[75px] xl:h-20" />
-          <img src="/images/logo/thrii-logo.png" alt="Thrii Logo" class="h-7 sm:h-9 xl:h-10" />
+    </div>
+
+    <div class="absolute z-30 bottom-12 xl:bottom-20 w-full space-y-6 sm:space-y-6 xl:space-y-9">
+      <div class="hidden sm:flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
+        <img src="/images/logo/tgc-logo.png" alt="The Global City Logo" class="h-10 sm:h-11 xl:h-12" />
+        <img src="/images/logo/mh-logo.png" alt="Masterise Homes Logo" class="h-14 sm:h-16 xl:h-16" />
+        <img src="/images/logo/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School Logo" class="h-14 sm:h-11 xl:h-12" />
+        <img src="/images/logo/sia-logo.png" alt="Soul Institute of Arts Logo" class="h-14 sm:h-16 xl:h-16" />
+        <img src="/images/logo/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-14 sm:h-5 xl:h-6" />
+      </div>
+      <div class="block sm:hidden space-y-6">
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/tgc-logo.png" alt="The Global City Logo" class="h-10" />
+          <img src="/images/logo/mh-logo.png" alt="Masterise Homes Logo" class="h-14" />
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
-          <img src="/images/logo/fonos-logo.png" alt="Fonos Logo" class="h-8 sm:h-9 xl:h-9" />
-          <img src="/images/logo/gaonau-logo.png" alt="Gao Nau Logo" class="h-9 sm:h-10 xl:h-10" />
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/vnth-logo.png" alt="Viet Nam Tinh Hoa Primary School" class="h-10" />
         </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6">
+          <img src="/images/logo/sia-logo.png" alt="Soul Institute of Arts" class="h-12" />
+          <img src="/images/logo/mss-logo.png" alt="Men Stay Simplicity Logo" class="h-4" />
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12 sm:gap-y-6">
+        <img src="/images/logo/thrii-logo.png" alt="Thrii Logo" class="h-5 sm:h-6 xl:h-7" />
+        <img src="/images/logo/fonos-logo.png" alt="Fonos Logo" class="h-6 sm:h-7 xl:h-9" />
+        <img src="/images/logo/gaonau-logo.png" alt="Gao Nau Logo" class="h-7 sm:h-9 xl:h-10" />
       </div>
     </div>
 
