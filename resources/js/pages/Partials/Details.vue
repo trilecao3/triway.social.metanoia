@@ -87,13 +87,36 @@ const trackTicket = (source) => {
                   </DialogHeader>
                   <div class="bg-[#FEFBF6] p-4 sm:p-6 font-medium text-black space-y-5 leading-snug text-sm sm:text-base">
                     <p>Tại Metanoia Chương III, Tri Lecao (The Tri Way) sẽ mang đến bài thuyết trình trọng điểm trong năm, chia sẻ một chủ đề tâm huyết cùng cộng đồng thính giả podcast có mặt tại sự kiện. Ngay sau đó, khán giả sẽ có cơ hội tham gia phần Q&amp;A trực tiếp để đối thoại và đặt câu hỏi.</p>
-                    <p>Bên cạnh đó, chương trình còn có sự góp mặt của các diễn giả khách mời, mang đến nhiều góc nhìn đa dạng và sâu sắc.</p>
-                    <div class="flex items-center flex-no-wrap overflow-x-auto">
-                      <img src="/images/speakers/ba-xuan-phuong.png" alt="Bà Xuân Phượng - Diễn giả khách mời" class="h-44 sm:h-60 w-auto" />
-                      <img src="/images/speakers/tri-lecao.png" alt="Lê Cao Trí - Diễn giả khách mời" class="h-44 sm:h-60 w-auto" />
-                    </div>
-                    <div class="bg-white rounded-lg p-3 sm:p-4 ring-1 ring-gray-200 shadow-sm font-semibold">
-                      <p class="text-sm">Theo dõi @triway.social trên <a href="https://facebook.com/triway.social" target="_blank" class="text-blue-600 underline">Facebook ↗</a> hoặc <a href="https://instagram.com/triway.social" target="_blank" class="text-pink-600 underline">Instagram ↗</a> để nhận cập nhật về diễn giả.</p>
+                    <p>Bên cạnh đó, chương trình còn có sự góp mặt của các diễn giả khách mời, mang đến nhiều góc nhìn đa dạng và sâu sắc:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+                      <div class="bg-white">
+                        <img src="/images/speakers/ba-xuan-phuong.jpg" alt="Bà Xuân Phượng - Diễn giả khách mời" class="w-full" />
+                        <div class="p-3">
+                          <p class="font-semibold">Bà Xuân Phượng</p>
+                          <p class="text-sm italic">Nữ đạo diễn gạo cội</p>
+                        </div>
+                      </div>
+                      <div class="bg-white">
+                        <img src="/images/speakers/thanh-bui.jpg" alt="Bà Xuân Phượng - Diễn giả khách mời" class="w-full" />
+                        <div class="p-3">
+                          <p class="font-semibold">Thanh Bùi</p>
+                          <p class="text-sm italic">Nhạc sĩ & Nhà giáo dục</p>
+                        </div>
+                      </div>
+                      <div class="bg-white">
+                        <img src="/images/speakers/nam-nguyen.jpg" alt="Bà Xuân Phượng - Diễn giả khách mời" class="w-full" />
+                        <div class="p-3">
+                          <p class="font-semibold">Nam Nguyễn</p>
+                          <p class="text-sm italic">Nhà sáng lập & CEO OplaCRM</p>
+                        </div>
+                      </div>
+                      <div class="bg-white">
+                        <img src="/images/speakers/tri-lecao.jpg" alt="Lê Cao Trí - Diễn giả khách mời" class="w-full" />
+                        <div class="p-3">
+                          <p class="font-semibold">Lê Cao Trí</p>
+                          <p class="text-sm italic">The Tri Way, CEO Thrii AI</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </DialogContent>
