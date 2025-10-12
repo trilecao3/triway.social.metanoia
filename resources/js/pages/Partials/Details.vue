@@ -245,12 +245,13 @@ const trackTicket = (source) => {
 
       <div class="flex items-center justify-center mt-20 sm:mt-10 space-x-5">
         <div class="w-1/2 relative flex flex-col-reverse sm:flex-row sm:min-h-[400px]">
-          <div class="relative z-10 sm:mt-40 w-fit ml-3 sm:ml-0 sm:w-[250px] flex flex-col space-y-3 sm:space-y-5">
+          <div class="relative z-10 -mt-5 sm:mt-40 w-fit ml-3 sm:ml-0 sm:w-[250px] flex flex-col space-y-3 sm:space-y-5">
             <h2 class="text-3xl sm:text-7xl text-blue-700 font-bold tracking-tight">Plato.</h2>
             <div class="grid grid-cols-1 gap-2 sm:flex sm:flex-col sm:space-y-5">
-              <div class="sm:mx-auto text-sm sm:text-xl text-blue-700 leading-5 sm:leading-6">
+              <div class="sm:mx-auto text-sm sm:text-xl text-blue-700 leading-5 sm:leading-6 opacity-50">
                 <p class="font-semibold">Early bird.</p>
                 <p>550.000 VND</p>
+                <p>(Đã hết)</p>
               </div>
               <div class="text-sm sm:text-xl text-blue-700 leading-5 sm:leading-6">
                 <p class="font-semibold">Late bird.</p>
