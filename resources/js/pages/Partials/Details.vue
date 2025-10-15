@@ -104,7 +104,7 @@ const trackTicket = (source) => {
                         </div>
                       </div>
                       <div class="bg-white">
-                        <img src="/images/speakers/nam-nguyen.jpg" alt="Bà Xuân Phượng - Diễn giả khách mời" class="w-full" />
+                        <img src="/images/speakers/nam-nguyen-2.jpg" alt="Bà Xuân Phượng - Diễn giả khách mời" class="w-full" />
                         <div class="p-3">
                           <p class="font-semibold">Nam Nguyễn</p>
                           <p class="text-sm italic">Nhà sáng lập & CEO OplaCRM</p>
